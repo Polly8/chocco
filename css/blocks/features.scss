@@ -1,7 +1,8 @@
 
 .features{
-    background: url(../images/iconBgLeaf.png) no-repeat;
+    background: url(../../images/iconBgLeaf.png) no-repeat;
     background-position: center left;
+    position: relative;
 
     &__text{
         font-size: 18px;
@@ -10,19 +11,16 @@
         margin: 0 auto 54px;
     }
 
-    &__description{
-        position: relative;
 
-        &:after{
-            content: "";
-            display: block;
-            width: 160px;
-            height: 315px;
-            background: url(../../images/raspberry.png) no-repeat;
-            position: absolute;
-            bottom: -210px;
-            left:  -80px;
-        }
+    &:after{
+        content: "";
+        display: block;
+        width: 160px;
+        height: 315px;
+        background: url(../../images/raspberry.png) no-repeat;
+        position: absolute;
+        bottom: -50px;
+        left:  0;
     }
 }
 

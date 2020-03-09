@@ -8,6 +8,10 @@
 }
 
 .reviews{
+    position: relative;
+    /*background: url(../../images/iconBgLeaf2.png) no-repeat;
+    background-position: left bottom;*/
+
     .section__title{
         margin-bottom: 44px;
     }
@@ -39,6 +43,14 @@
             top: -120px;
             right: -60px;
         }
+    }
+
+    &:after{
+        @include decor(95px, 286px);
+        background: url(../../images/iconBgLeaf2.png) no-repeat;
+        bottom: -32px;
+        left: 0;
+        z-index: -5;
     }
 }
 
@@ -86,14 +98,6 @@
         background: url(../../images/berries4.png) no-repeat;
         bottom: -136px;
         left: -65px;
-    }
-
-    &:after{
-        @include decor(95px, 286px);
-        background: url(../../images/iconBgLeaf2.png) no-repeat;
-        bottom: -184px;
-        left: -80px;
-        z-index: -5;
     }
 }
 

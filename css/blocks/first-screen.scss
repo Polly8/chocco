@@ -30,6 +30,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
 
 
@@ -68,18 +69,23 @@
     }
 }
 
-.first-screen__left::after{   
-    @include decor(65px, 113px);
-    background: url(../../images/leaf3.png) no-repeat;
-    bottom: -52px;
-    left:  35px;
-}
 
-.first-screen__left::before{
-    @include decor(226px, 210px);
-    background: url(../../images/berries1.png) no-repeat;
-    bottom: 114px;
-    right:  245px;
+.first-screen__left{
+    position: relative;
+
+    &::after{
+        @include decor(65px, 113px);
+        background: url(../../images/leaf3.png) no-repeat;
+        bottom: -134px;
+        left:  -30px;
+    }
+
+    &::before{
+        @include decor(226px, 210px);
+        background: url(../../images/berries1.png) no-repeat;
+        bottom: 15px;
+        right:  -272px;
+    }
 }
 
 
@@ -87,12 +93,14 @@
 .first-screen__container::after{
     @include decor(126px, 110px);
     background: url(../../images/berries2.png) no-repeat;
-    bottom: -50px;
-    right: 76px;
+    bottom: -130px;
+    right: 5px;
 }
 
 .desc-list{
-    @extend .first-screen__container;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     &__item{
         display: flex;
