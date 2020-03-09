@@ -1,0 +1,36 @@
+.header {
+  padding: 24px 0;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.nav__list .nav__item {
+  margin-right: 30px;
+}
+.nav__list .nav__item:last-child {
+  margin-right: 0;
+}
+
+.contacts {
+  font-size: 24px;
+}
+.contacts a {
+  color: #fff;
+}
+.contacts a::before {
+  content: "";
+  display: inline-block;
+  background: url(../../images/phone.png);
+  width: 25px;
+  height: 25px;
+}

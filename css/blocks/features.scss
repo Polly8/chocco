@@ -1,0 +1,35 @@
+
+.features{
+    background: url(../images/iconBgLeaf.png) no-repeat;
+    background-position: center left;
+
+    &__text{
+        font-size: 18px;
+        color: #656565;
+        width: 550px;
+        margin: 0 auto 54px;
+    }
+
+    &__description{
+        position: relative;
+
+        &:after{
+            content: "";
+            display: block;
+            width: 160px;
+            height: 315px;
+            background: url(../../images/raspberry.png) no-repeat;
+            position: absolute;
+            bottom: -210px;
+            left:  -80px;
+        }
+    }
+}
+
+.features-container{
+    text-align: center;
+    padding: 115px 0;
+}
+
+
+

@@ -1,0 +1,126 @@
+.reviews .section__title {
+  margin-bottom: 44px;
+}
+.reviews__main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px 45px 34px;
+  background: url(../../images/reviews-main.png) no-repeat;
+  position: relative;
+  margin-bottom: 28px;
+}
+.reviews__main:before {
+  width: 80px;
+  height: 50px;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 7;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+}
+.reviews__main:after {
+  width: 146px;
+  height: 86px;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 146px;
+  height: 86px;
+  background: url(../../images/berries3.png) no-repeat;
+  top: -120px;
+  right: -60px;
+}
+
+.reviews__img {
+  width: 254px;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.reviews__content {
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+}
+.reviews__content-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.reviews__content-text {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+.reviews__content-author {
+  font-size: 18px;
+  font-weight: medium;
+}
+
+.reviews__switch {
+  position: relative;
+}
+.reviews__switch:before {
+  width: 134px;
+  height: 194px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(../../images/berries4.png) no-repeat;
+  bottom: -136px;
+  left: -65px;
+}
+.reviews__switch:after {
+  width: 95px;
+  height: 286px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(../../images/iconBgLeaf2.png) no-repeat;
+  bottom: -184px;
+  left: -80px;
+  z-index: -5;
+}
+
+.reviews__switch-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__switch-item {
+  margin-right: 11px;
+}
+.reviews__switch-item:last-child {
+  margin-right: 0;
+}
+
+.reviews__switch-item-link, .reviews__switch-item--active {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__switch-item--active {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #365a49;
+  border: 6px solid #365a49;
+}

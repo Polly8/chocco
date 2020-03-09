@@ -1,0 +1,32 @@
+.description__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.description__item-img {
+  background-color: #f3f5f3;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 33px;
+}
+.description__item-name {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+.description__item-text {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #666666;
+}
+
+.description__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

@@ -1,0 +1,134 @@
+
+@mixin decor($width, $height) {
+    width: $width;
+    height: $height;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.reviews{
+    .section__title{
+        margin-bottom: 44px;
+    }
+
+    &__main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 50px 45px 34px;
+        background: url(../../images/reviews-main.png) no-repeat;
+        position: relative;
+        margin-bottom: 28px;
+
+        &:before{
+            @include decor(80px, 50px);
+            border-radius: 50%;
+            background-color: #fff;
+            z-index: 7;
+            left: 50%;
+            top: -25px;
+            transform: translateX(-50%);
+        }
+
+        &:after{
+            @include decor(146px, 86px);
+            width: 146px;
+            height: 86px;
+            background: url(../../images/berries3.png) no-repeat;
+            top: -120px;
+            right: -60px;
+        }
+    }
+}
+
+
+.reviews__img{
+    width: 254px;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.reviews__content{
+    width: 510px;
+    display: flex;
+    flex-direction: column;
+
+    &-title{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    &-text{
+        font-size: 18px;
+        color: #666666;
+        margin-bottom: 30px;
+    }
+
+    &-author{
+        font-size: 18px;
+        font-weight: medium;
+    }
+}
+
+
+.reviews__switch{
+    position: relative;
+
+    &:before{
+        @include decor(134px, 194px);
+        background: url(../../images/berries4.png) no-repeat;
+        bottom: -136px;
+        left: -65px;
+    }
+
+    &:after{
+        @include decor(95px, 286px);
+        background: url(../../images/iconBgLeaf2.png) no-repeat;
+        bottom: -184px;
+        left: -80px;
+        z-index: -5;
+    }
+}
+
+
+.reviews__switch-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews__switch-item{
+    margin-right: 11px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.reviews__switch-item-link{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews__switch-item--active{
+    @extend .reviews__switch-item-link;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: #365a49;
+    border: 6px solid #365a49;
+}
