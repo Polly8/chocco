@@ -10,42 +10,50 @@
 @import url('./blocks/reviews.css');
 
 
-.decor-points-item{
-    width: 13px;
-    height: 13px;
-    background-color: #f2f5f4;
+.circle-nav{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.circle-nav__list{
+    display: flex;
+    flex-direction: column;
+}
+
+.circle-nav__item{
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    margin-right: 10px;
+    background-color: teal;
+    margin-bottom: 15px;
+    position: relative;
 
     &:last-child{
-        margin-right: 0;
+        margin-bottom: 0;
     }
 
-}
-
-
-
-.decor-points{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-
-    &--left{
-        top: 25%;
-        left: -37px;
-        transform: translateY(-25%);
-    }
-
-    &--right{
-        top: 25%;
-        right: -37px;
-        transform: translateY(-25%);
+    &:before{
+        content: "";
+        display: none;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid teal;
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
     }
 }
 
-.decor-points-item--big{
-    width: 21px;
-    height: 21px;
+.circle-nav__item--active:before{
+    display: block;
+    @extend .circle-nav__item:before
+
+}
+
+.circle-nav__item:hover:before{
+    @extend .circle-nav__item--active:before
 }

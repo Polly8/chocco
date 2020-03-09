@@ -29,5 +29,43 @@
     padding: 115px 0;
 }
 
+.decor-points-item{
+    width: 13px;
+    height: 13px;
+    background-color: #f2f5f4;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+}
+
+.decor-points{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+    &--left{
+        top: 25%;
+        left: -37px;
+        transform: translateY(-25%);
+    }
+
+    &--right{
+        top: 25%;
+        right: -37px;
+        transform: translateY(-25%);
+    }
+}
+
+.decor-points-item--big{
+    width: 21px;
+    height: 21px;
+}
+
 
 
