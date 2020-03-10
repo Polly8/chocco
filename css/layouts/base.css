@@ -1,5 +1,6 @@
 html {
   font-family: "alegreya_sans", sans-serif;
+  --webkit-font-smoothing: antialiased;
   font-size: 12px;
   height: 100%;
 }
@@ -29,6 +30,18 @@ h1, h2, h3, h4, h5, h6, p {
   flex: 1;
 }
 
+h4 {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 a {
   text-decoration: none;
 }
@@ -51,6 +64,9 @@ ul li {
 .section {
   min-height: 650px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .section__title {
   font-size: 48px;
