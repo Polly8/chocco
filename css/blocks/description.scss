@@ -4,6 +4,11 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-right: 80px;
+
+    &:last-child{
+        margin-right: 0;
+    }
     
 
     &-img{
@@ -17,11 +22,6 @@
         margin-bottom: 33px;
     }
 
-    &-name{
-        font-size: 27px;
-        font-weight: bold;
-        margin-bottom: 26px;
-    }
 
     &-text{
         font-size: 16px;
@@ -37,3 +37,33 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.description__item-img--have-circles{
+    position: relative;
+
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 67px;
+        height: 21px;
+        background: url(../../images/circles1.png) no-repeat;
+        top: 50%;
+        left: -136px;
+        transform: translateY(-50%);
+    }
+
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 67px;
+        height: 21px;
+        background: url(../../images/circles1.png) no-repeat;
+        top: 50%;
+        right: -136px;
+        transform: translateY(-50%);
+    }
+}
+
+

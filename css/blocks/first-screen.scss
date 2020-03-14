@@ -1,8 +1,10 @@
 
 .first-screen{
+
+    position: relative;
+
     &__content{
         width: 400px;
-        padding-top: 100px;
     }
     
     &__title{
@@ -30,6 +32,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
+    height: 100%;
 }
 
 
@@ -63,23 +67,31 @@
     &::before{      
         @include decor(150px, 106px);
         background: url(../../images/leaf2.png) no-repeat;
-        bottom: -115px;
+        bottom: -31px;
         right: 245px;
     }
 }
 
-.first-screen__left::after{   
-    @include decor(65px, 113px);
-    background: url(../../images/leaf3.png) no-repeat;
-    bottom: -52px;
-    left:  35px;
-}
 
-.first-screen__left::before{
-    @include decor(226px, 210px);
-    background: url(../../images/berries1.png) no-repeat;
-    bottom: 114px;
-    right:  245px;
+.first-screen__left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &::after{
+        @include decor(65px, 113px);
+        background: url(../../images/leaf3.png) no-repeat;
+        bottom: -52px;
+        left:  -30px;
+    }
+
+    &::before{
+        @include decor(226px, 210px);
+        background: url(../../images/berries1.png) no-repeat;
+        bottom: 15px;
+        right:  -272px;
+    }
 }
 
 
@@ -87,12 +99,14 @@
 .first-screen__container::after{
     @include decor(126px, 110px);
     background: url(../../images/berries2.png) no-repeat;
-    bottom: -50px;
-    right: 76px;
+    bottom: -53px;
+    right: 5px;
 }
 
 .desc-list{
-    @extend .first-screen__container;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     &__item{
         display: flex;

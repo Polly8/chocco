@@ -1,6 +1,8 @@
+.first-screen {
+  position: relative;
+}
 .first-screen__content {
   width: 400px;
-  padding-top: 100px;
 }
 .first-screen__title {
   font-size: 48px;
@@ -19,10 +21,12 @@
   margin-bottom: 68px;
 }
 
-.first-screen__container, .desc-list {
+.first-screen__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  height: 100%;
 }
 
 .first-screen__img {
@@ -52,10 +56,16 @@
   display: block;
   position: absolute;
   background: url(../../images/leaf2.png) no-repeat;
-  bottom: -115px;
+  bottom: -31px;
   right: 245px;
 }
 
+.first-screen__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .first-screen__left::after {
   width: 65px;
   height: 113px;
@@ -64,9 +74,8 @@
   position: absolute;
   background: url(../../images/leaf3.png) no-repeat;
   bottom: -52px;
-  left: 35px;
+  left: -30px;
 }
-
 .first-screen__left::before {
   width: 226px;
   height: 210px;
@@ -74,21 +83,26 @@
   display: block;
   position: absolute;
   background: url(../../images/berries1.png) no-repeat;
-  bottom: 114px;
-  right: 245px;
+  bottom: 15px;
+  right: -272px;
 }
 
-.first-screen__container::after, .desc-list::after {
+.first-screen__container::after {
   width: 126px;
   height: 110px;
   content: "";
   display: block;
   position: absolute;
   background: url(../../images/berries2.png) no-repeat;
-  bottom: -50px;
-  right: 76px;
+  bottom: -53px;
+  right: 5px;
 }
 
+.desc-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .desc-list__item {
   display: flex;
   flex-direction: row;
