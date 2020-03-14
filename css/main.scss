@@ -57,3 +57,10 @@
 .circle-nav__item:hover:before{
     @extend .circle-nav__item--active:before
 }
+
+
+.team__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
