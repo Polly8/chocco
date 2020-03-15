@@ -7,56 +7,8 @@
 @import url("./blocks/features.css");
 @import url("./blocks/description.css");
 @import url("./blocks/reviews.css");
-.circle-nav {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.circle-nav__list {
-  display: flex;
-  flex-direction: column;
-}
-
-.circle-nav__item {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: teal;
-  margin-bottom: 15px;
-  position: relative;
-}
-.circle-nav__item:last-child {
-  margin-bottom: 0;
-}
-.circle-nav__item:before {
-  content: "";
-  display: none;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 2px solid teal;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-}
-
-.circle-nav__item--active:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 2px solid teal;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-}
-
-.circle-nav__item:hover:before {
-  display: block;
-  cursor: pointer;
-}
+@import url("./blocks/circle-nav.css");
+@import url("./blocks/contacts.css");
+@import url("./blocks/deliver.css");
+@import url("./blocks/menu-accord.css");
+@import url("./blocks/team.css");

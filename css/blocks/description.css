@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-right: 80px;
+  margin-right: 6.6rem;
 }
 .description__item:last-child {
   margin-right: 0;
@@ -16,10 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 33px;
+  margin-bottom: 2.7rem;
 }
 .description__item-text {
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: lighter;
   color: #666666;
 }
@@ -41,7 +41,7 @@
   height: 21px;
   background: url(../../images/circles1.png) no-repeat;
   top: 50%;
-  left: -136px;
+  left: -11.3rem;
   transform: translateY(-50%);
 }
 .description__item-img--have-circles:after {
@@ -52,6 +52,6 @@
   height: 21px;
   background: url(../../images/circles1.png) no-repeat;
   top: 50%;
-  right: -136px;
+  right: -11.3rem;
   transform: translateY(-50%);
 }

@@ -1,0 +1,45 @@
+.contacts__map {
+  position: relative;
+  height: 100vh;
+}
+
+.contacts__footer {
+  position: absolute;
+}
+
+.contacts__phone {
+  color: #355a49;
+}
+
+.contacts__address {
+  margin-bottom: 0.8rem;
+}
+
+.contacts__phone::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 11px;
+  background: url(../../images/phone2.png) no-repeat;
+}
+
+.contacts__footer {
+  background-color: #fff;
+  position: absolute;
+  padding: 1.6rem 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

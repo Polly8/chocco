@@ -5,10 +5,10 @@
     position: relative;
 
     &__text{
-        font-size: 18px;
+        font-size: 15.rem;
         color: #656565;
         width: 550px;
-        margin: 0 auto 54px;
+        margin: 0 auto 4.5rem;
     }
 
 
@@ -19,7 +19,7 @@
         height: 315px;
         background: url(../../images/raspberry.png) no-repeat;
         position: absolute;
-        bottom: -50px;
+        bottom: -7rem;
         left:  0;
     }
 }

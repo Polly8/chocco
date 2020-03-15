@@ -5,28 +5,36 @@
   width: 400px;
 }
 .first-screen__title {
-  font-size: 48px;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 22px;
+  margin-bottom: 1.8rem;
 }
 .first-screen__text {
   font-weight: normal;
-  font-size: 21px;
-  margin-bottom: 32px;
+  font-size: 1.6rem;
+  margin-bottom: 2.6rem;
 }
 .first-screen__btn {
   background-color: #fff;
   color: #355a49;
-  margin-bottom: 68px;
+  margin-bottom: 5.6rem;
+}
+
+.first-screen__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .first-screen__container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   position: relative;
   height: 100%;
+  padding-bottom: 3.3rem;
 }
 
 .first-screen__img {
@@ -46,8 +54,8 @@
   display: block;
   position: absolute;
   background: url(../../images/leaf1.png);
-  bottom: 100px;
-  right: -12px;
+  bottom: 3.7rem;
+  right: -1rem;
 }
 .first-screen__right::before {
   width: 150px;
@@ -56,8 +64,8 @@
   display: block;
   position: absolute;
   background: url(../../images/leaf2.png) no-repeat;
-  bottom: -31px;
-  right: 245px;
+  bottom: -12.5rem;
+  right: 20.4rem;
 }
 
 .first-screen__left {
@@ -73,8 +81,8 @@
   display: block;
   position: absolute;
   background: url(../../images/leaf3.png) no-repeat;
-  bottom: -52px;
-  left: -30px;
+  bottom: -14.1rem;
+  left: -2.5rem;
 }
 .first-screen__left::before {
   width: 226px;
@@ -83,8 +91,8 @@
   display: block;
   position: absolute;
   background: url(../../images/berries1.png) no-repeat;
-  bottom: 15px;
-  right: -272px;
+  bottom: 0;
+  right: -27.5rem;
 }
 
 .first-screen__container::after {
@@ -94,28 +102,27 @@
   display: block;
   position: absolute;
   background: url(../../images/berries2.png) no-repeat;
-  bottom: -53px;
-  right: 5px;
+  bottom: -4.4rem;
+  right: 0.4rem;
 }
 
 .desc-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 .desc-list__item {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 140px;
-  margin-right: 44px;
+  margin-right: 3.6rem;
 }
 .desc-list__item:last-child {
   margin-right: 0;
 }
 .desc-list__item-img {
-  margin-right: 10px;
+  margin-right: 0.8rem;
 }
 .desc-list__item-text {
-  font-size: 16px;
+  font-size: 1.3rem;
 }

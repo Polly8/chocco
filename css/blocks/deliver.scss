@@ -1,0 +1,160 @@
+
+@mixin decor($width, $height) {
+    width: $width;
+    height: $height;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.deliver{
+    background-color: #d2ddd9;
+    background: url(../../images/form-bg.png);
+    color: #365a49;
+}
+
+.order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    &::before{
+        @include decor(48px, 48px);
+        background: url(../../images/blackberry.png)no-repeat;
+        bottom: 0;
+        left: -5rem;
+    }
+
+    &::after{
+        @include decor(135px, 188px);
+        background: url(../../images/form-leaf.png)no-repeat;
+        bottom: 0;
+        right: -6.2rem;
+    }
+}
+
+.order__row{
+    display: flex;
+    margin-bottom: 1.1rem;
+}
+
+.order__block{
+    flex: 1;
+    margin-right: 1.6rem;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.order__title{
+    margin-bottom: 0.4rem;
+    font-size: 1.5rem;
+}
+
+.order__input{
+    width: 100%;
+    padding: 1.6rem 0.8rem;
+    border: none;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.order__side{
+    width: calc(100% / 2 - 10px);
+}
+
+.order__block-radio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.order__block-checkbox{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.6rem;
+}
+
+.order__button{
+    border: none;
+    padding: 1.6rem 3.2rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+}
+
+.order__reset{
+    background-color: transparent;
+}
+
+.order__submit{
+    background-color: #365a49;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.order__radio{
+    display: none;
+}
+
+
+.order__radio--visible{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.4rem;
+}
+
+.order__radio--visible-fill{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #365a49;
+    display: none;
+}
+
+
+.order__radio:checked ~ .order__radio--visible 
+.order__radio--visible-fill {
+    display: block;
+}
+
+.order__title-radio{
+    margin-bottom: 0;
+}
+
+
+.order__checkbox{
+    display: none;
+}
+
+.order__checkbox--visible{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.4rem;
+}
+
+.order__checkbox--visible-fill{
+    width: 20px;
+    height: 20px;
+    background: url(../../images/tick.png) no-repeat;
+    background-position: center;
+    display: none;
+}
+
+.order__checkbox:checked ~ .order__checkbox--visible 
+.order__checkbox--visible-fill {
+    display: block;
+}

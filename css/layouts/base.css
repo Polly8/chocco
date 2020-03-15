@@ -31,15 +31,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h4 {
-  font-size: 27px;
+  font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 26px;
+  margin-bottom: 2.2rem;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 2.5rem;
 }
 
 a {
@@ -69,14 +69,14 @@ ul li {
   justify-content: center;
 }
 .section__title {
-  font-size: 48px;
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 0 auto 20px;
+  margin: 0 auto 1.6rem;
 }
 
 .button {
-  padding: 18px 29px;
+  padding: 1.5rem 2.3rem;
   border-radius: 35px;
   border: none;
   font-size: 19px;
