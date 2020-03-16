@@ -41,7 +41,6 @@
 .first-screen__btn {
   background-color: #fff;
   color: #355a49;
-  margin-bottom: 5.5rem;
 }
 @media screen and (max-width: 768px) {
   .first-screen__btn {

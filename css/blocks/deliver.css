@@ -50,6 +50,9 @@
   display: flex;
   margin-bottom: 1rem;
 }
+.order__row:last-child {
+  margin-bottom: 0;
+}
 
 .order__block {
   flex: 1;
@@ -110,6 +113,10 @@
   padding: 1.6rem 3.1rem;
   border-radius: 30px;
   font-size: 1.5rem;
+}
+
+.order__button:hover {
+  cursor: pointer;
 }
 
 .order__reset {
@@ -187,4 +194,8 @@
     display: flex;
     justify-content: center;
   }
+}
+
+.order__block-radio, .order__block-checkbox:hover {
+  cursor: pointer;
 }

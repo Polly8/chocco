@@ -41,6 +41,7 @@
 
 }
 
+
 .circle-nav__item:hover:before{
     @extend .circle-nav__item--active:before
 }

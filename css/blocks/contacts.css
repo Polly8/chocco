@@ -12,15 +12,20 @@
   position: absolute;
 }
 
-.contacts__phone {
+.contacts-foot__phone {
+  font-size: 2rem;
+}
+.contacts-foot__phone a {
   color: #355a49;
 }
 
 .contacts__address {
   margin-bottom: 0.8rem;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
-.contacts__phone::before {
+.contacts-foot__phone::before {
   content: "";
   display: inline-block;
   width: 12px;

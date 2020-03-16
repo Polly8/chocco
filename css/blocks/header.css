@@ -21,13 +21,17 @@
   margin-right: 0;
 }
 
-.contacts {
-  font-size: 2rem;
-}
-.contacts a {
+.nav__item a {
   color: #fff;
 }
-.contacts a::before {
+
+.contacts-head {
+  font-size: 2rem;
+}
+.contacts-head a {
+  color: #fff;
+}
+.contacts-head a::before {
   content: "";
   display: inline-block;
   background: url(../../images/phone.png);

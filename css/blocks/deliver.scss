@@ -61,6 +61,10 @@
 .order__row{
     display: flex;
     margin-bottom: 1rem;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 
 .order__block{
@@ -120,6 +124,10 @@
     padding: 1.6rem 3.1rem;
     border-radius: 30px;
     font-size: 1.5rem;
+}
+
+.order__button:hover{
+    cursor: pointer;
 }
 
 .order__reset{
@@ -199,8 +207,14 @@
 
 
 .order__row-btns{
+
     @include tablets{
         display: flex;
         justify-content: center;
     }
+}
+
+
+.order__block-radio, .order__block-checkbox:hover{
+    cursor: pointer;
 }
