@@ -1,14 +1,30 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
 .features{
     background: url(../../images/iconBgLeaf.png) no-repeat;
     background-position: center left;
     position: relative;
 
     &__text{
-        font-size: 15.rem;
+        font-size: 1.2rem;
         color: #656565;
         width: 550px;
         margin: 0 auto 4.5rem;
+
+        @include phones{
+            width: 80%;
+        }
     }
 
 
@@ -21,9 +37,19 @@
         position: absolute;
         bottom: -7rem;
         left:  0;
+
+        @include phones{
+            display: none;
+        }
+    }
+
+    @include phones{
+        height: auto;
+        padding: 3.3rem 0;
     }
 }
 
 .features-container{
     text-align: center;
 }
+

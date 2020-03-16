@@ -3,14 +3,6 @@
   overflow: hidden;
   position: relative;
 }
-
-.section__title--left {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  color: #fff;
-}
-
 .menu__list {
   display: flex;
   justify-content: flex-end;
@@ -18,17 +10,22 @@
   background: url(../../images/menu-bg.png) no-repeat;
   background-size: cover;
 }
-
 .menu__item {
   display: flex;
   height: 100%;
 }
-
 .menu__trigger {
   display: block;
   width: 80px;
   height: 100%;
   position: relative;
+}
+
+.section__title--left {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #fff;
 }
 
 .menu__trigger--milky {
@@ -86,4 +83,24 @@
   color: #fff;
   display: none;
   width: 85%;
+}
+
+.menu__item--opened .menu__content {
+  width: 100%;
+}
+
+.menu__item--opened {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .menu__item--opened {
+    min-width: 260px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__item--opened {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
 }

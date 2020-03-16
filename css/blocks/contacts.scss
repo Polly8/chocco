@@ -1,9 +1,25 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
 .contacts__map{
     position: relative;
     height: 100vh;
+    display: flex;
 }
 
+.map{
+    width: 100%;
+}
 
 .contacts__footer{
     position: absolute;
@@ -40,6 +56,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include phones{
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .contacts__list{
@@ -47,4 +68,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include phones{
+        justify-content: center;
+    }
 }
+

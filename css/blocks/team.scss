@@ -1,4 +1,17 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
+
 @mixin decor($width, $height) {
     width: $width;
     height: $height;
@@ -7,47 +20,88 @@
     position: absolute;
 }
 
-.team__list{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1.6rem 0;
-    position: relative;
+.team{
+    @include tablets{
+        height: auto;
+    }
+
+    &__item{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: calc(100% / 4 - 15px);
+
+        @include tablets{
+            width: auto;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.6rem 0;
+        position: relative;
+
+        @include tablets{
+            flex-direction: column;
+        }
+    }
+
+    &__photo{
+
+        width: 100%;
+        height: 287px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        @include tablets{
+            display: none;
+        }
+    
+        @include phones{
+            width: 140px;
+            height: 180px;
+        }
+    }
+
+    &__name{
+
+        font-size: 1.7rem;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        align-items: center;
+
+        @include tablets{
+            margin-bottom: 1.1rem;
+        }
+    }
+
+    &__position{
+        font-weight: 500;
+    }
+
+    &__text{
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        display: none;
+    }
 }
+
 
 .team__item:after{
     @include decor(120px, 120px);
     background: url(../../images/team-berry.png)no-repeat;
-    bottom: -14.2rem;
+    bottom: -14.1rem;
     left: -6.6rem;
     z-index: 5;
-}
-
-.team__item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.team__photo{
-    width: 220px;
-    height: 287px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1.6rem;
-    margin-bottom: 2rem;
-}
-
-.team__name{
-    font-size: 1.7rem;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-    align-items: center;
 }
 
 .team__name::after{
@@ -62,11 +116,46 @@
     margin-bottom: 3px;
 }
 
-.team__text{
-    font-size: 1.5rem;
-    padding: 1rem 0;
-}
 
 .team__text p{
     color: #666666;
+}
+
+.team__item--active .team__text{
+    display: block;
+
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        order: 3;
+        padding-top: 0;
+        width: 40%;
+    }
+}
+
+.team__item--active .team__name::after{
+    transform: rotate(180deg);
+}
+
+
+.team__item--active{
+    @include tablets{
+        flex-direction: column;
+        
+    }
+}
+
+.team__item--active .team__photo{
+    @include tablets{
+        display: flex;
+        order: 2;
+    }
+}
+
+.team__item--active .team__name{
+    @include tablets{
+        display: flex;
+        order: 1;
+        margin-bottom: 1.1rem;
+    }
 }

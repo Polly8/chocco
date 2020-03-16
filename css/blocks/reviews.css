@@ -4,16 +4,18 @@
   background-position: left bottom;*/
 }
 .reviews .section__title {
-  margin-bottom: 3.6rem;
+  margin-bottom: 3.5rem;
 }
 .reviews__main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4.1rem 3.7rem 2.8rem;
+  padding: 4rem 3.6rem 2.7rem;
   background: url(../../images/reviews-main.png) no-repeat;
   position: relative;
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.2rem;
+  background-position: center;
+  z-index: -7;
 }
 .reviews__main:before {
   width: 80px;
@@ -35,8 +37,15 @@
   display: block;
   position: absolute;
   background: url(../../images/berries3.png) no-repeat;
-  top: -12rem;
+  top: 0;
   right: -5rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__main {
+    background-size: cover;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .reviews:after {
   width: 95px;
@@ -45,7 +54,7 @@
   display: block;
   position: absolute;
   background: url(../../images/iconBgLeaf2.png) no-repeat;
-  bottom: -2.6rem;
+  bottom: -2.5rem;
   left: 0;
   z-index: -5;
 }
@@ -60,9 +69,16 @@
   align-items: center;
   margin-right: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+  .reviews__img {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 3.3rem;
+  }
+}
 
 .reviews__content {
-  width: 510px;
+  width: 59%;
   display: flex;
   flex-direction: column;
 }
@@ -75,6 +91,11 @@
   font-size: 1.5rem;
   font-weight: medium;
 }
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    width: 100%;
+  }
+}
 
 .reviews__switch {
   position: relative;
@@ -86,8 +107,8 @@
   display: block;
   position: absolute;
   background: url(../../images/berries4.png) no-repeat;
-  bottom: -11.3rem;
-  left: -5.4rem;
+  bottom: -8.8rem;
+  left: -5.3rem;
 }
 
 .reviews__switch-list {

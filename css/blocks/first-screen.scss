@@ -1,55 +1,13 @@
 
-.first-screen{
-
-    position: relative;
-
-    &__content{
-        width: 400px;
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
     }
-    
-    &__title{
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 1.8rem;
-    }
-
-    &__text{
-    font-weight: normal;
-    font-size: 1.6rem;
-    margin-bottom: 2.6rem;
-    }
-
-    &__btn{
-        background-color: #fff;
-        color: #355a49;
-        margin-bottom: 5.6rem;
-    }
-
 }
 
-.first-screen__wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.first-screen__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    height: 100%;
-    padding-bottom: 3.3rem;
-}
-
-
-.first-screen__img{
-    width: 480px;
-
-    img{
-        max-width: 100%;
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
     }
 }
 
@@ -62,21 +20,143 @@
     position: absolute;
 }
 
+.first-screen{
+
+    position: relative;
+
+    &__content{
+        width: 80%;
+
+        @include tablets{
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    
+    &__title{
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 1.6rem;
+
+        @include phones{
+            font-size: 3.7rem;
+        }
+    }
+
+    &__text{
+        font-weight: normal;
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+
+        @include tablets{
+            margin: 0 auto 2.5rem;
+            width: 50%;
+        }
+
+        @include phones{
+            width: 72%;
+        }
+    }
+
+    &__btn{
+        background-color: #fff;
+        color: #355a49;
+        margin-bottom: 5.5rem;
+
+        @include tablets{
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+
+        @include tablets{
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        height: 100%;
+        padding-bottom: 3.3rem;
+    }
+
+    &__img{
+        width: 480px;
+
+        img{
+            max-width: 100%;
+        }
+
+        @include phones{
+            width: 100%;
+        }
+
+        @include tablets{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__desc{
+        @include tablets{
+            display: none;
+        }
+    }
+}
+
+
 .first-screen__right{
     position: relative;
 
     &::after{
         @include decor(226px, 206px);
-        background: url(../../images/leaf1.png);
-        bottom: 3.7rem;
+        background: url(../../images/leaf1.png) no-repeat;
+        background-size: contain;
+        bottom: 3.6rem;
         right: -1rem;
+
+        @include tablets{
+            width: 151px;
+            height: 139px;
+            bottom: 5.9rem;
+            right: 11.8rem;
+        }
+
+        @include phones{
+            bottom: 5.9rem;
+            right: 2.3rem;
+        }
     }
 
     &::before{      
         @include decor(150px, 106px);
         background: url(../../images/leaf2.png) no-repeat;
         bottom: -12.5rem;
-        right: 20.4rem;
+        right: 18.6rem;
+        background-size: contain;
+
+        @include tablets{
+            width: 95px;
+            height: 75px;
+            bottom: -1.5rem;
+            right: 22.5rem;
+        }
+
+        @include phones{
+            bottom: 0;
+            right: 11.4rem;
+        }
     }
 }
 
@@ -92,6 +172,20 @@
         background: url(../../images/leaf3.png) no-repeat;
         bottom: -14.1rem;
         left:  -2.5rem;
+        background-size: contain;
+
+        @include tablets{
+            width: 38px;
+            height: 73px;
+            top: -16.5rem;
+            left: 12.8rem;
+            z-index: 3;
+        }
+
+        @include phones{
+            top: -14.3rem;
+            left: 5.3rem;
+        }
     }
 
     &::before{
@@ -99,6 +193,20 @@
         background: url(../../images/berries1.png) no-repeat;
         bottom: 0;
         right:  -27.5rem;
+        background-size: contain;
+
+        @include tablets{
+            width: 179px;
+            height: 185px;
+            top: -19.5rem;
+            left: 13.5rem;
+            z-index: 2;  
+        }
+
+        @include phones{
+            top: -15rem;
+            left: 7rem;
+        }
     }
 }
 
@@ -107,8 +215,21 @@
 .first-screen__container::after{
     @include decor(126px, 110px);
     background: url(../../images/berries2.png) no-repeat;
-    bottom: -4.4rem;
+    bottom: -4.3rem;
     right: 0.4rem;
+    background-size: contain;
+
+    @include tablets{
+        width: 75px;
+        height: 71px;
+        bottom: 32.7rem;
+        right: 15rem; 
+    }
+
+    @include phones{
+        bottom: 32.2rem;
+        right: 4rem;
+    }
 }
 
 .desc-list{
@@ -119,8 +240,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 140px;
-        margin-right: 3.6rem;
+        width: 11.6rem;
+        margin-right: 3.5rem;
 
         &:last-child{
             margin-right: 0;
@@ -136,3 +257,16 @@
         
     }
 }
+
+
+.first-screen__img img{
+    @include tablets{
+        width: 70%;
+    }
+
+    @include phones{
+        width: 100%;
+    }
+}
+
+

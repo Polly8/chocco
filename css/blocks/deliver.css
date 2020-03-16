@@ -20,6 +20,11 @@
   bottom: 0;
   left: -5rem;
 }
+@media screen and (max-width: 768px) {
+  .order::before {
+    display: none;
+  }
+}
 .order::after {
   width: 135px;
   height: 188px;
@@ -28,12 +33,22 @@
   position: absolute;
   background: url(../../images/form-leaf.png) no-repeat;
   bottom: 0;
-  right: -6.2rem;
+  right: -6.1rem;
+}
+@media screen and (max-width: 768px) {
+  .order::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .order {
+    flex-direction: column;
+  }
 }
 
 .order__row {
   display: flex;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .order__block {
@@ -53,12 +68,29 @@
   width: 100%;
   padding: 1.6rem 0.8rem;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #000;
+}
+@media screen and (max-width: 768px) {
+  .order__input {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+  }
 }
 
 .order__side {
   width: calc(100% / 2 - 10px);
+}
+@media screen and (max-width: 768px) {
+  .order__side {
+    width: 77%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .order__side {
+    width: 90%;
+  }
 }
 
 .order__block-radio {
@@ -75,7 +107,7 @@
 
 .order__button {
   border: none;
-  padding: 1.6rem 3.2rem;
+  padding: 1.6rem 3.1rem;
   border-radius: 30px;
   font-size: 1.5rem;
 }
@@ -148,4 +180,11 @@
 
 .order__checkbox:checked ~ .order__checkbox--visible .order__checkbox--visible-fill {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .order__row-btns {
+    display: flex;
+    justify-content: center;
+  }
 }

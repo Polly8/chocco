@@ -1,6 +1,7 @@
 @import url("./layouts/fonts.css");
 @import url("./layouts/normalize.css");
 @import url("./layouts/base.css");
+@import url("./layouts/media.css");
 @import url("./blocks/hero.css");
 @import url("./blocks/header.css");
 @import url("./blocks/first-screen.css");

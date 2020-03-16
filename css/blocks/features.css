@@ -4,10 +4,15 @@
   position: relative;
 }
 .features__text {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #656565;
   width: 550px;
-  margin: 0 auto 54px;
+  margin: 0 auto 4.5rem;
+}
+@media screen and (max-width: 480px) {
+  .features__text {
+    width: 80%;
+  }
 }
 .features:after {
   content: "";
@@ -16,8 +21,19 @@
   height: 315px;
   background: url(../../images/raspberry.png) no-repeat;
   position: absolute;
-  bottom: -85px;
+  bottom: -7rem;
   left: 0;
+}
+@media screen and (max-width: 480px) {
+  .features:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .features {
+    height: auto;
+    padding: 3.3rem 0;
+  }
 }
 
 .features-container {

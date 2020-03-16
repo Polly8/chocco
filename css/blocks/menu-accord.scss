@@ -1,9 +1,40 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
 
 .menu{
     display: flex;
     overflow: hidden;
     position: relative;
+
+    &__list{
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        background: url(../../images/menu-bg.png) no-repeat;
+        background-size: cover;
+    }
+
+    &__item{
+        display: flex;
+        height: 100%;
+    }
+
+    &__trigger{
+        display: block;
+        width: 80px;
+        height: 100%;
+        position: relative;
+    }
 }
 
 .section__title--left{
@@ -14,25 +45,6 @@
 }
 
 
-.menu__list{
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-    background: url(../../images/menu-bg.png) no-repeat;
-    background-size: cover;
-}
-
-.menu__item{
-    display: flex;
-    height: 100%;
-}
-
-.menu__trigger{
-    display: block;
-    width: 80px;
-    height: 100%;
-    position: relative;
-}
 
 .menu__trigger--milky{
     background: url(../../images/with-milk2.png) no-repeat;
@@ -91,4 +103,23 @@
     color: #fff;
     display: none;
     width: 85%;
+}
+
+.menu__item--opened .menu__content{
+    width: 100%;
+
+}
+
+.menu__item--opened{
+    width: 50%;
+
+    @include tablets{
+        min-width: 260px;
+    }
+
+    @include phones{
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+    }
 }

@@ -24,21 +24,29 @@
                             </a>
                         </div>
 
-                        <nav class="nav">
-                            <ul class="nav__list">
-                                <li class="nav__item">О нас</li>
-                                <li class="nav__item">Батончики</li>
-                                <li class="nav__item">Команда</li>
-                                <li class="nav__item">Меню</li>
-                                <li class="nav__item">Отзывы</li>
-                                <li class="nav__item">Как мы работаем</li>
-                                <li class="nav__item">Контакты</li>
-                            </ul>
-                        </nav>
-
-                        <div class="contacts">
-                            <a href="#">8 800 903 90 90</a>
+                        <div class="header__menu">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">О нас</li>
+                                    <li class="nav__item">Батончики</li>
+                                    <li class="nav__item">Команда</li>
+                                    <li class="nav__item">Меню</li>
+                                    <li class="nav__item">Отзывы</li>
+                                    <li class="nav__item">Как мы работаем</li>
+                                    <li class="nav__item">Контакты</li>
+                                </ul>
+                            </nav>
+    
+                            <div class="contacts">
+                                <a href="#">8 800 903 90 90</a>
+                            </div>
                         </div>
+
+                        <div class="header__humburger">
+                            <a href="#"><img src="./images" alt=""></a>
+                        </div>
+
+                        
                     </div>
                 </header>
 
@@ -139,21 +147,25 @@
                                 <img src="./images/iconUsef.png" alt="usefull">
                             </div>
 
-                            <h4>Полезно</h4>
+                            <div class="description__wrap">
+                                <h4>Полезно</h4>
 
-                            <div class="description__item-text">
-                                <p>
-                                    Натуральность - ключевое качество нашей продукции. 
-                                    Мы используем только природные ингредиенты.
-                                </p>
+                                <div class="description__item-text">
+                                    <p>
+                                        Натуральность - ключевое качество нашей продукции. 
+                                        Мы используем только природные ингредиенты.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="description__item">
+
+                            <div class="description__item-img description__item-img--have-circles">
+                                <img src="./images/iconDelic.png" alt="delicious">
                             </div>
 
-                            <li class="description__item">
-
-                                <div class="description__item-img description__item-img--have-circles">
-                                    <img src="./images/iconDelic.png" alt="delicious">
-                                </div>
-
+                            <div class="description__wrap">
                                 <h4>Вкусно</h4>
 
                                 <div class="description__item-text">
@@ -162,15 +174,17 @@
                                         вкусовые качества наших батончиков.
                                     </p>
                                 </div>
+                            </div>                  
 
-                            </li>
+                        </li>
 
-                            <li class="description__item">
+                        <li class="description__item">
 
-                                <div class="description__item-img">
-                                    <img src="./images/iconFull.png" alt="full">
-                                </div>
+                            <div class="description__item-img">
+                                <img src="./images/iconFull.png" alt="full">
+                            </div>
 
+                            <div class="description__wrap">
                                 <h4>Питательно</h4>
 
                                 <div class="description__item-text">
@@ -179,8 +193,10 @@
                                         а также всех необходимых витаминов и минералов.
                                     </p>
                                 </div>
-                            </li>
+                            </div>
+                         
                         </li>
+                        
                     </ul>
                     
 
@@ -201,7 +217,7 @@
                             </div>
 
                             <div class="team__description">
-                                <div class="team__name">Борис Федорович</div>
+                                <a class="team__name">Борис Федорович</a>
                                 
                                 <div class="team__text">
                                     <div class="team__position">Оператор</div>
@@ -218,7 +234,7 @@
                             </div>
 
                             <div class="team__description">
-                                <div class="team__name">Алла Иванова</div>
+                                <a class="team__name">Алла Иванова</a>
                                 
                                 <div class="team__text">
                                     <div class="team__position">Оператор</div>
@@ -229,21 +245,20 @@
                             </div>
                         </li>
 
-                        <li class="team__item">
+                        <li class="team__item team__item--active">
                             <div class="team__photo">
                                 <img src="./images/team3.png" alt="">
                             </div>
-
-                            <div class="team__description">
-                                <div class="team__name">Кирилл Матросов</div>
-                                
-                                <div class="team__text">
-                                    <div class="team__position">Оператор</div>
-                                    <p>С радостью поможет
-                                        подобрать батончики и оформить заказ.
-                                    </p>
-                                </div>
+                            
+                            <div><a class="team__name">Кирилл Матросов</a></div>
+                            
+                            <div class="team__text">
+                                <div class="team__position">Оператор</div>
+                                <p>С радостью поможет
+                                    подобрать батончики и оформить заказ.
+                                </p>
                             </div>
+                            
                         </li>
 
                         <li class="team__item">
@@ -252,7 +267,7 @@
                             </div>
 
                             <div class="team__description">
-                                <div class="team__name">Мила Рыжкова</div>
+                                <a class="team__name">Мила Рыжкова</a>
                                 
                                 <div class="team__text">
                                     <div class="team__position">Оператор</div>
@@ -273,12 +288,12 @@
                 <h2 class="section__title section__title--left">Меню</h2>
 
                 <ul class="menu__list">
-                    <li class="menu__item">
+                    <li class="menu__item menu__item--opened">
                         <a href="" class="menu__trigger menu__trigger--milky">
                             <span class="menu__trigger-text">Батончики с молоком</span>
                         </a>
 
-                        <div class="menu__content" style="width: 550px;">
+                        <div class="menu__content">
                             <div class="menu__text" style="display: block;">
                                 Рекомендуем употреблять батончики вместе с кокосовым или 
                                 миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё 
@@ -487,7 +502,7 @@
                                 </label>
                             </div>
 
-                            <div class="order__row">                              
+                            <div class="order__row order__row-btns">                              
                                 <button type="submit" class="order__button order__submit">Заказать</button>
                                 <button type="reset" class="order__button order__reset">Очистить</button>
                             </div>
@@ -503,7 +518,7 @@
             <section class="contacts">
                 
                 <div class="contacts__map">
-                    <img src="./images/map.png" alt="">
+                    <img src="./images/map.png" alt="" class="map">
 
                     <div class="contacts__footer">
                         <div class="container footer-container">

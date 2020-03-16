@@ -1,4 +1,16 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
 @mixin decor($width, $height) {
     width: $width;
     height: $height;
@@ -24,19 +36,31 @@
         background: url(../../images/blackberry.png)no-repeat;
         bottom: 0;
         left: -5rem;
+
+        @include tablets{
+            display: none;
+        }
     }
 
     &::after{
         @include decor(135px, 188px);
         background: url(../../images/form-leaf.png)no-repeat;
         bottom: 0;
-        right: -6.2rem;
+        right: -6.1rem;
+
+        @include tablets{
+            display: none;
+        }
+    }
+
+    @include tablets{
+        flex-direction: column;
     }
 }
 
 .order__row{
     display: flex;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .order__block{
@@ -57,12 +81,26 @@
     width: 100%;
     padding: 1.6rem 0.8rem;
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #000;
+
+    @include tablets{
+        padding: 0.8rem;
+        font-size: 1.1rem;
+    }
 }
 
 .order__side{
     width: calc(100% / 2 - 10px);
+
+    @include tablets{
+        width: 77%;
+        margin: 0 auto;
+    }
+
+    @include phones{
+        width: 90%;
+    }
 }
 
 .order__block-radio{
@@ -79,7 +117,7 @@
 
 .order__button{
     border: none;
-    padding: 1.6rem 3.2rem;
+    padding: 1.6rem 3.1rem;
     border-radius: 30px;
     font-size: 1.5rem;
 }
@@ -157,4 +195,12 @@
 .order__checkbox:checked ~ .order__checkbox--visible 
 .order__checkbox--visible-fill {
     display: block;
+}
+
+
+.order__row-btns{
+    @include tablets{
+        display: flex;
+        justify-content: center;
+    }
 }
