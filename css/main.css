@@ -157,11 +157,3 @@
   bottom: -2.9rem;
   right: -2.5rem;
 }
-
-svg .twitter-icon:hover {
-  fill: red;
-}
-
-#facebook:hover {
-  fill: green;
-}
