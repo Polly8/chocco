@@ -85,6 +85,16 @@ ul li {
   margin: 0 auto 1.6rem;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .section {
+    min-height: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section {
+    min-height: 0;
+  }
+}
 
 .button {
   padding: 1.5rem 2.3rem;

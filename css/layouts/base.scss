@@ -99,6 +99,14 @@ ul li{
         margin: 0 auto 1.6rem;
         text-align: center;
     }
+
+    @include tablets{
+        min-height: 0;
+    }
+
+    @include phones{
+        min-height: 0;
+    }
 }
 
 .button{

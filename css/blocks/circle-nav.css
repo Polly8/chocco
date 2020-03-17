@@ -4,6 +4,16 @@
   top: 50%;
   transform: translateY(-50%);
 }
+@media screen and (max-width: 768px) {
+  .circle-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .circle-nav {
+    display: none;
+  }
+}
 
 .circle-nav__list {
   display: flex;

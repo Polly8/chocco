@@ -28,3 +28,157 @@
     }
 }
 
+@mixin decor($width, $height) {
+    width: $width;
+    height: $height;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.bars{
+    background-color: #f8faf9;
+    position: relative;
+
+    &::before{
+        @include decor(196px, 453px);
+        background: url(../images/slider-bg.png) no-repeat;
+        right: 0;
+        bottom: -17.5rem;
+    }
+
+    &::after{
+        @include decor(135px, 112px);
+        background: url(../images/blackberry-slider.png) no-repeat;
+        right: 1.2rem;
+        bottom: -6rem;
+    }
+}
+
+.bars__slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider__content{
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p{
+        font-size: 1.6rem;
+        color: #666666;
+        margin-bottom: 3.3rem;
+    }
+}
+
+.slider__consist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #86c3d7;
+    width: fit-content;
+    padding: 0.7rem 1.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 2.7rem;
+
+    img{
+        margin-bottom: 0.6rem;
+    }
+}
+
+.slider__title{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.slider__details{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2.9rem;
+    font-size: 1.5rem;
+    
+    &-item{
+        margin-right: 4.5rem;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &-info{
+        font-weight: bold;
+    }
+}
+
+.slider__bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slider__price{
+    margin-right: 4.5rem;
+    font-size: 5rem;
+    font-weight: lighter;
+}
+
+.slider__button{
+    background-color: #365a49;
+    color: #fff;
+}
+
+.bars__arrow--next{
+    transform: rotate(180deg);
+}
+
+.bars__arrow{
+    margin-right: 4rem;
+
+    &:last-child{
+        margin: 0 0 0 4rem;
+    }
+}
+
+.slider__img{
+    position: relative;
+
+    &::before{      
+        @include decor(75px, 92px);
+        background: url(../images/slider-leaf2.png) no-repeat;
+        top: 7.7rem;
+        left: -5.1rem;
+    }
+
+    &::after{      
+        @include decor(99px, 73px);
+        background: url(../images/slider-leaf1.png) no-repeat;
+        bottom: -2.9rem;
+        right: -2.5rem;
+    }
+}
+
+
+svg .twitter-icon:hover{
+    fill: red;
+}
+
+#facebook:hover{
+    fill: green;
+}
+

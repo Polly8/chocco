@@ -37,6 +37,7 @@
         position: absolute;
         bottom: -7rem;
         left:  0;
+        z-index: 4;
 
         @include phones{
             display: none;
