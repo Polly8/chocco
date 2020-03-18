@@ -260,3 +260,10 @@
     width: 100%;
   }
 }
+
+.first-screen__icon {
+  margin-right: 0.8rem;
+}
+.first-screen__icon:last-child {
+  margin-right: 0;
+}
