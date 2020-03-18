@@ -64,3 +64,10 @@
     justify-content: center;
   }
 }
+
+.contacts__item {
+  margin-right: 1.6rem;
+}
+.contacts__item:last-child {
+  margin-right: 0;
+}

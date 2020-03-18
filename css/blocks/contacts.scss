@@ -82,3 +82,10 @@
     }
 }
 
+.contacts__item{
+    margin-right: 1.6rem;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
