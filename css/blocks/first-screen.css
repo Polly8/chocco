@@ -116,6 +116,7 @@
   .first-screen__right::after {
     bottom: 5.9rem;
     right: 2.3rem;
+    width: 81px;
   }
 }
 .first-screen__right::before {
@@ -174,6 +175,7 @@
   .first-screen__left::after {
     top: -14.3rem;
     left: 5.3rem;
+    width: 38px;
   }
 }
 .first-screen__left::before {
@@ -200,6 +202,7 @@
   .first-screen__left::before {
     top: -15rem;
     left: 7rem;
+    width: 123px;
   }
 }
 
@@ -226,6 +229,7 @@
   .first-screen__container::after {
     bottom: 32.2rem;
     right: 4rem;
+    width: 56px;
   }
 }
 
@@ -253,11 +257,6 @@
 @media screen and (max-width: 768px) {
   .first-screen__img img {
     width: 70%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .first-screen__img img {
-    width: 100%;
   }
 }
 

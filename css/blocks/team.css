@@ -1,8 +1,3 @@
-@media screen and (max-width: 768px) {
-  .team {
-    height: auto;
-  }
-}
 .team__item {
   display: flex;
   flex-direction: column;

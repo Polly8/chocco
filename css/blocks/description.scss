@@ -11,6 +11,8 @@
     }
 }
 
+
+
 .description__item{
     display: flex;
     flex-direction: column;
@@ -38,6 +40,11 @@
             margin-bottom: 0;
             margin-right: 1.6rem;
         }
+
+
+        img{
+            width: 50%;
+        }
     }
 
 
@@ -50,7 +57,7 @@
     @include phones{
         flex-direction: row;
         text-align: start;
-        margin-bottom: 3.3rem;
+        margin-bottom: 1rem;
         margin-right: 0;
     }
 }

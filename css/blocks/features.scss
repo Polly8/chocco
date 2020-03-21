@@ -9,7 +9,7 @@
     @media screen and (max-width:480px){
         @content;
     }
-}
+} 
 
 .features{
     background: url(../../images/iconBgLeaf.png) no-repeat;
@@ -24,6 +24,7 @@
 
         @include phones{
             width: 80%;
+            margin: 0 auto 2rem;
         }
     }
 
@@ -45,8 +46,8 @@
     }
 
     @include phones{
-        height: auto;
         padding: 3.3rem 0;
+        background: none;
     }
 }
 

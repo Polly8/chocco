@@ -25,6 +25,9 @@
     margin-right: 1.6rem;
   }
 }
+.description__item-img img {
+  width: 50%;
+}
 .description__item-text {
   font-size: 1.3rem;
   font-weight: lighter;
@@ -34,7 +37,7 @@
   .description__item {
     flex-direction: row;
     text-align: start;
-    margin-bottom: 3.3rem;
+    margin-bottom: 1rem;
     margin-right: 0;
   }
 }

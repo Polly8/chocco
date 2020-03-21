@@ -12,6 +12,7 @@
 }
 
 
+
 @mixin decor($width, $height) {
     width: $width;
     height: $height;
@@ -135,6 +136,7 @@
         @include phones{
             bottom: 5.9rem;
             right: 2.3rem;
+            width: 81px;
         }
     }
 
@@ -184,6 +186,7 @@
         @include phones{
             top: -14.3rem;
             left: 5.3rem;
+            width: 38px;
         }
     }
 
@@ -205,6 +208,7 @@
         @include phones{
             top: -15rem;
             left: 7rem;
+            width: 123px;
         }
     }
 }
@@ -228,6 +232,7 @@
     @include phones{
         bottom: 32.2rem;
         right: 4rem;
+        width: 56px;
     }
 }
 
@@ -261,11 +266,8 @@
 .first-screen__img img{
     @include tablets{
         width: 70%;
-    }
+    } 
 
-    @include phones{
-        width: 100%;
-    }
 }
 
 .first-screen__icon{

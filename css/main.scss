@@ -16,6 +16,7 @@
 @import url('./blocks/menu-accord.css');
 @import url('./blocks/team.css');
 
+
 @mixin tablets {
     @media screen and (max-width:768px){
         @content;
@@ -44,7 +45,11 @@
         @include decor(196px, 453px);
         background: url(../images/slider-bg.png) no-repeat;
         right: 0;
-        bottom: -17.5rem;
+        bottom: -23.5rem;
+
+        @include tablets{
+            right: -120px;
+        }
     }
 
     &::after{
@@ -52,6 +57,10 @@
         background: url(../images/blackberry-slider.png) no-repeat;
         right: 1.2rem;
         bottom: -6rem;
+
+        @include tablets{
+            right: -8.8rem;
+        }
     }
 }
 
@@ -60,6 +69,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include tablets{
+        align-items: start;
+    }
 }
 
 .slider__item{
@@ -67,6 +80,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @include tablets{
+        flex-direction: column;
+    }
 }
 
 .slider__content{
@@ -79,6 +96,19 @@
         font-size: 1.6rem;
         color: #666666;
         margin-bottom: 3.3rem;
+
+        @include tablets{
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include tablets{
+        width: 90%;
+        text-align: center;
+    }
+
+    @include phones{
+        width: 80%;
     }
 }
 
@@ -98,6 +128,10 @@
     img{
         margin-bottom: 0.6rem;
     }
+
+    @include tablets{
+        display: none;
+    }
 }
 
 .slider__title{
@@ -105,6 +139,10 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 25px;
+
+    @include tablets{
+        font-size: 2.5rem;
+    }
 }
 
 .slider__details{
@@ -124,12 +162,21 @@
     &-info{
         font-weight: bold;
     }
+
+    @include tablets{
+        margin: 0 auto 2.9rem;
+        text-align: start;
+    }
 }
 
 .slider__bottom{
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @include tablets{
+        margin: 0 auto;
+    }
 }
 
 .slider__price{
@@ -137,7 +184,7 @@
     font-size: 5rem;
     font-weight: lighter;
 }
-
+ 
 .slider__button{
     background-color: #365a49;
     color: #fff;
@@ -145,7 +192,26 @@
 
 .bars__arrow--next{
     transform: rotate(180deg);
+
+    @include tablets{
+        right: 15%;
+    }
+
+    @include phones{
+        right: 5%;
+    }
 }
+
+.bars__arrow--prev {
+    @include tablets{
+        left: 15%;
+    }
+
+    @include phones{
+        left: 5%;
+    }
+}
+
 
 .bars__arrow{
     margin-right: 4rem;
@@ -153,15 +219,27 @@
     &:last-child{
         margin: 0 0 0 4rem;
     }
+
+    @include tablets{
+        top: 30%;
+        position: absolute;
+    }
+
+    @include phones{
+        top: 25%;
+    }
 }
+
 
 .slider__img{
     position: relative;
+    width: 50%;
+    margin-right: 20px;
 
     &::before{      
         @include decor(75px, 92px);
         background: url(../images/slider-leaf2.png) no-repeat;
-        top: 7.7rem;
+        top: 1.7rem;
         left: -5.1rem;
     }
 
@@ -169,8 +247,17 @@
         @include decor(99px, 73px);
         background: url(../images/slider-leaf1.png) no-repeat;
         bottom: -2.9rem;
-        right: -2.5rem;
+        right: -0.5rem;     
     }
+
+    img{
+        width: 100%;
+    }
+
+    @include tablets{
+        margin-bottom: 4.1rem;
+    }
+
 }
 
 
