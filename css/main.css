@@ -306,6 +306,6 @@
   width: 45%;
 }
 
-svg .insta-icon:hover path {
+svg#insta:hover path {
   fill: #000000;
 }
