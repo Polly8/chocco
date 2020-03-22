@@ -88,6 +88,10 @@
   margin-bottom: 3px;
 }
 
+.team__name:hover {
+  color: #5c76aa;
+}
+
 .team__text p {
   color: #666666;
 }

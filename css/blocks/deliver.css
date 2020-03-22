@@ -123,11 +123,21 @@
   background-color: transparent;
 }
 
+.order__reset:hover {
+  color: #fff;
+}
+
 .order__submit {
   background-color: #365a49;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.order__submit:hover {
+  background-color: #fff;
+  color: #365a49;
+  border: 1px solid #365a49;
 }
 
 .order__radio {

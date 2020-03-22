@@ -35,12 +35,26 @@
         &:last-child{
             margin-right: 0;
         }
+
+        @include tablets{
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include tablets{
+        flex-direction: column;
+        text-align: center;
     }
    
 }
 
 .nav__item a{
     color: #fff;
+}
+
+.nav__item a:hover{
+    color: #2e4e3f;
 }
 
 .contacts-head{
@@ -56,6 +70,11 @@
             height: 11px;
             margin-right: 6px;
         }
+
+    }
+
+    @include tablets{
+        margin-bottom: 2rem;
     }
 }
 
@@ -68,20 +87,53 @@
 
     @include tablets{
         display: none;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        width: 50%;
+        height: 100vh;
+        background: #386d86;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        opacity: 0.9;
+        border-radius: 3px;
+        padding-top: 3rem;
     }
+
+    @include phones{
+        width: 100%;
+    }
+
 }
 
 .nav{
     margin-right: 1.6rem;
+
+    @include tablets{
+        margin-right: 0;
+    }
 }
 
 .header__humburger{
+    z-index: 20;
+}
+
+.header__humburger a{
     display: none;
     background: url(../../images/humburger.png) no-repeat;
     width: 24px;
     height: 22px;
 
     @include tablets{
-        display: block;
+        display: block;     
     }
+}
+
+.header__humburger a:hover{
+
+    @include tablets{
+        cursor: pointer;
+    }
+    
 }

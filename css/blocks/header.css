@@ -20,9 +20,25 @@
 .nav__list .nav__item:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 768px) {
+  .nav__list .nav__item {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 .nav__item a {
   color: #fff;
+}
+
+.nav__item a:hover {
+  color: #2e4e3f;
 }
 
 .contacts-head {
@@ -39,6 +55,11 @@
   height: 11px;
   margin-right: 6px;
 }
+@media screen and (max-width: 768px) {
+  .contacts-head {
+    margin-bottom: 2rem;
+  }
+}
 
 .header__menu {
   display: flex;
@@ -49,21 +70,53 @@
 @media screen and (max-width: 768px) {
   .header__menu {
     display: none;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100vh;
+    background: #386d86;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    opacity: 0.9;
+    border-radius: 3px;
+    padding-top: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__menu {
+    width: 100%;
   }
 }
 
 .nav {
   margin-right: 1.6rem;
 }
+@media screen and (max-width: 768px) {
+  .nav {
+    margin-right: 0;
+  }
+}
 
 .header__humburger {
+  z-index: 20;
+}
+
+.header__humburger a {
   display: none;
   background: url(../../images/humburger.png) no-repeat;
   width: 24px;
   height: 22px;
 }
 @media screen and (max-width: 768px) {
-  .header__humburger {
+  .header__humburger a {
     display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__humburger a:hover {
+    cursor: pointer;
   }
 }
