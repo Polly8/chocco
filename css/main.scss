@@ -314,6 +314,18 @@
 
 
 
-svg#insta:hover path{
-    fill: #000000;
+.vk-icon{
+    fill: black;
+}
+
+#vk{
+    fill: red;
+}
+
+.vk-icon:hover{
+    fill: green;
+}
+
+#vk:hover{
+    fill: blue;
 }
