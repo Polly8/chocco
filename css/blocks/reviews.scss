@@ -1,4 +1,18 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
+
+
 @mixin decor($width, $height) {
     width: $width;
     height: $height;
@@ -13,17 +27,24 @@
     background-position: left bottom;*/
 
     .section__title{
-        margin-bottom: 44px;
+        margin-bottom: 3.5rem;
+
+        @include phones{
+            margin-bottom: 1rem;
+        }
+       
     }
 
     &__main{
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 50px 45px 34px;
+        padding: 4rem 3.6rem 2.7rem;
         background: url(../../images/reviews-main.png) no-repeat;
         position: relative;
-        margin-bottom: 28px;
+        margin-bottom: 2.2rem;
+        background-position: center;
+        z-index: -7;
 
         &:before{
             @include decor(80px, 50px);
@@ -31,26 +52,35 @@
             background-color: #fff;
             z-index: 7;
             left: 50%;
-            top: -25px;
+            top: -2rem;
             transform: translateX(-50%);
         }
 
         &:after{
             @include decor(146px, 86px);
-            width: 146px;
-            height: 86px;
             background: url(../../images/berries3.png) no-repeat;
-            top: -120px;
-            right: -60px;
+            top: 0;
+            right: -5rem;
+        }
+
+        @include tablets{
+            background-size: cover;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        @include phones{
+            padding: 4rem 1rem 2rem;
+            margin-bottom: 0rem;
         }
     }
 
     &:after{
         @include decor(95px, 286px);
         background: url(../../images/iconBgLeaf2.png) no-repeat;
-        bottom: -32px;
+        bottom: -2.5rem;
         left: 0;
-        z-index: -5;
+        z-index: -8;
     }
 }
 
@@ -63,23 +93,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 1.5rem;
+
+    @include tablets{
+        width: 130px;
+        height: 130px;
+        margin-bottom: 3.3rem;
+    }
+
+    @include phones{
+        width: 110px;
+        height: 110px;
+        margin-bottom: 1rem;
+    }
 }
 
 .reviews__content{
-    width: 510px;
+    width: 59%;
     display: flex;
     flex-direction: column;
 
     &-text{
-        font-size: 18px;
+        font-size: 1.5rem;
         color: #666666;
-        margin-bottom: 30px;
+        margin-bottom: 2.5rem;
+
+        @include phones{
+            margin-bottom: 2rem;
+        }
     }
 
     &-author{
-        font-size: 18px;
+        font-size: 1.5rem;
         font-weight: medium;
+    }
+
+    @include tablets{
+        width: 100%;
     }
 }
 
@@ -90,8 +140,13 @@
     &:before{
         @include decor(134px, 194px);
         background: url(../../images/berries4.png) no-repeat;
-        bottom: -136px;
-        left: -65px;
+        bottom: -8.8rem;
+        left: -5.3rem;
+
+        @include phones{
+            bottom: -5.8rem;
+            left: -9.3rem;
+        }
     }
 }
 
@@ -104,7 +159,7 @@
 }
 
 .reviews__switch-item{
-    margin-right: 11px;
+    margin-right: 1rem;
 
     &:last-child{
         margin-right: 0;
@@ -130,3 +185,4 @@
     background-color: #365a49;
     border: 6px solid #365a49;
 }
+

@@ -4,16 +4,23 @@
   background-position: left bottom;*/
 }
 .reviews .section__title {
-  margin-bottom: 44px;
+  margin-bottom: 3.5rem;
+}
+@media screen and (max-width: 480px) {
+  .reviews .section__title {
+    margin-bottom: 1rem;
+  }
 }
 .reviews__main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 50px 45px 34px;
+  padding: 4rem 3.6rem 2.7rem;
   background: url(../../images/reviews-main.png) no-repeat;
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 2.2rem;
+  background-position: center;
+  z-index: -7;
 }
 .reviews__main:before {
   width: 80px;
@@ -25,7 +32,7 @@
   background-color: #fff;
   z-index: 7;
   left: 50%;
-  top: -25px;
+  top: -2rem;
   transform: translateX(-50%);
 }
 .reviews__main:after {
@@ -34,11 +41,22 @@
   content: "";
   display: block;
   position: absolute;
-  width: 146px;
-  height: 86px;
   background: url(../../images/berries3.png) no-repeat;
-  top: -120px;
-  right: -60px;
+  top: 0;
+  right: -5rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__main {
+    background-size: cover;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__main {
+    padding: 4rem 1rem 2rem;
+    margin-bottom: 0rem;
+  }
 }
 .reviews:after {
   width: 95px;
@@ -47,9 +65,9 @@
   display: block;
   position: absolute;
   background: url(../../images/iconBgLeaf2.png) no-repeat;
-  bottom: -32px;
+  bottom: -2.5rem;
   left: 0;
-  z-index: -5;
+  z-index: -8;
 }
 
 .reviews__img {
@@ -60,22 +78,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__img {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 3.3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1rem;
+  }
 }
 
 .reviews__content {
-  width: 510px;
+  width: 59%;
   display: flex;
   flex-direction: column;
 }
 .reviews__content-text {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #666666;
-  margin-bottom: 30px;
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 480px) {
+  .reviews__content-text {
+    margin-bottom: 2rem;
+  }
 }
 .reviews__content-author {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: medium;
+}
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    width: 100%;
+  }
 }
 
 .reviews__switch {
@@ -88,8 +130,14 @@
   display: block;
   position: absolute;
   background: url(../../images/berries4.png) no-repeat;
-  bottom: -136px;
-  left: -65px;
+  bottom: -8.8rem;
+  left: -5.3rem;
+}
+@media screen and (max-width: 480px) {
+  .reviews__switch:before {
+    bottom: -5.8rem;
+    left: -9.3rem;
+  }
 }
 
 .reviews__switch-list {
@@ -100,7 +148,7 @@
 }
 
 .reviews__switch-item {
-  margin-right: 11px;
+  margin-right: 1rem;
 }
 .reviews__switch-item:last-child {
   margin-right: 0;

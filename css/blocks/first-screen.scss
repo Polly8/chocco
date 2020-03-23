@@ -1,49 +1,16 @@
 
-.first-screen{
-
-    position: relative;
-
-    &__content{
-        width: 400px;
-    }
-    
-    &__title{
-    font-size: 48px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 22px;
-    }
-
-    &__text{
-    font-weight: normal;
-    font-size: 21px;
-    margin-bottom: 32px;
-    }
-
-    &__btn{
-        background-color: #fff;
-        color: #355a49;
-        margin-bottom: 68px;
-    }
-
-}
-
-.first-screen__container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    height: 100%;
-}
-
-
-.first-screen__img{
-    width: 480px;
-
-    img{
-        max-width: 100%;
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
     }
 }
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
 
 
 @mixin decor($width, $height) {
@@ -54,21 +21,143 @@
     position: absolute;
 }
 
+.first-screen{
+
+    position: relative;
+
+    &__content{
+        width: 80%;
+
+        @include tablets{
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    
+    &__title{
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 1.6rem;
+
+        @include phones{
+            font-size: 3.7rem;
+        }
+    }
+
+    &__text{
+        font-weight: normal;
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+
+        @include tablets{
+            margin: 0 auto 2.5rem;
+            width: 50%;
+        }
+
+        @include phones{
+            width: 72%;
+        }
+    }
+
+    &__btn{
+        background-color: #fff;
+        color: #355a49;
+
+        @include tablets{
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+
+        @include tablets{
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        height: 100%;
+        padding-bottom: 3.3rem;
+    }
+
+    &__img{
+        width: 480px;
+
+        img{
+            max-width: 100%;
+        }
+
+        @include phones{
+            width: 100%;
+        }
+
+        @include tablets{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__desc{
+        @include tablets{
+            display: none;
+        }
+    }
+}
+
+
 .first-screen__right{
     position: relative;
 
     &::after{
         @include decor(226px, 206px);
-        background: url(../../images/leaf1.png);
-        bottom: 100px;
-        right: -12px;
+        background: url(../../images/leaf1.png) no-repeat;
+        background-size: contain;
+        bottom: 3.6rem;
+        right: -1rem;
+
+        @include tablets{
+            width: 151px;
+            height: 139px;
+            bottom: 5.9rem;
+            right: 11.8rem;
+        }
+
+        @include phones{
+            bottom: 5.9rem;
+            right: 2.3rem;
+            width: 81px;
+        }
     }
 
     &::before{      
         @include decor(150px, 106px);
         background: url(../../images/leaf2.png) no-repeat;
-        bottom: -31px;
-        right: 245px;
+        bottom: -12.5rem;
+        right: 18.6rem;
+        background-size: contain;
+
+        @include tablets{
+            width: 95px;
+            height: 75px;
+            bottom: -1.5rem;
+            right: 22.5rem;
+        }
+
+        @include phones{
+            bottom: 0;
+            right: 11.4rem;
+        }
     }
 }
 
@@ -82,15 +171,45 @@
     &::after{
         @include decor(65px, 113px);
         background: url(../../images/leaf3.png) no-repeat;
-        bottom: -52px;
-        left:  -30px;
+        bottom: -14.1rem;
+        left:  -2.5rem;
+        background-size: contain;
+
+        @include tablets{
+            width: 38px;
+            height: 73px;
+            top: -16.5rem;
+            left: 12.8rem;
+            z-index: 3;
+        }
+
+        @include phones{
+            top: -14.3rem;
+            left: 5.3rem;
+            width: 38px;
+        }
     }
 
     &::before{
         @include decor(226px, 210px);
         background: url(../../images/berries1.png) no-repeat;
-        bottom: 15px;
-        right:  -272px;
+        bottom: 0;
+        right:  -27.5rem;
+        background-size: contain;
+
+        @include tablets{
+            width: 179px;
+            height: 185px;
+            top: -19.5rem;
+            left: 13.5rem;
+            z-index: 2;  
+        }
+
+        @include phones{
+            top: -15rem;
+            left: 7rem;
+            width: 123px;
+        }
     }
 }
 
@@ -99,21 +218,34 @@
 .first-screen__container::after{
     @include decor(126px, 110px);
     background: url(../../images/berries2.png) no-repeat;
-    bottom: -53px;
-    right: 5px;
+    bottom: -4.3rem;
+    right: 0.4rem;
+    background-size: contain;
+
+    @include tablets{
+        width: 75px;
+        height: 71px;
+        bottom: 32.7rem;
+        right: 15rem; 
+    }
+
+    @include phones{
+        bottom: 32.2rem;
+        right: 4rem;
+        width: 56px;
+    }
 }
 
 .desc-list{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
     &__item{
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 140px;
-        margin-right: 44px;
+        width: 11.6rem;
+        margin-right: 3.5rem;
 
         &:last-child{
             margin-right: 0;
@@ -121,11 +253,28 @@
     }
 
     &__item-img{
-        margin-right: 10px;
+        margin-right: 0.8rem;
     }
 
     &__item-text{
-        font-size: 16px;
+        font-size: 1.3rem;
         
     }
 }
+
+
+.first-screen__img img{
+    @include tablets{
+        width: 70%;
+    } 
+
+}
+
+.first-screen__icon{
+    margin-right: 0.8rem;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+

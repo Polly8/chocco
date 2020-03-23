@@ -1,4 +1,16 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
 .header{
     padding-top: 24px;
 
@@ -15,10 +27,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 1.6rem;
 
     .nav__item{
-        margin-right: 30px;
+        margin-right: 2.5rem;
 
         &:last-child{
             margin-right: 0;
@@ -27,8 +39,12 @@
    
 }
 
-.contacts{
-    font-size: 24px;
+.nav__item a{
+    color: #fff;
+}
+
+.contacts-head{
+    font-size: 2rem;
 
     a{
         color: #fff;
@@ -40,5 +56,32 @@
             height: 11px;
             margin-right: 6px;
         }
+    }
+}
+
+
+.header__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablets{
+        display: none;
+    }
+}
+
+.nav{
+    margin-right: 1.6rem;
+}
+
+.header__humburger{
+    display: none;
+    background: url(../../images/humburger.png) no-repeat;
+    width: 24px;
+    height: 22px;
+
+    @include tablets{
+        display: block;
     }
 }

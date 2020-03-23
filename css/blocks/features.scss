@@ -1,14 +1,31 @@
 
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width:480px){
+        @content;
+    }
+} 
+
 .features{
     background: url(../../images/iconBgLeaf.png) no-repeat;
     background-position: center left;
     position: relative;
 
     &__text{
-        font-size: 18px;
+        font-size: 1.5rem;
         color: #656565;
         width: 550px;
-        margin: 0 auto 54px;
+        margin: 0 auto 4.5rem;
+
+        @include phones{
+            width: 80%;
+            margin: 0 auto 2rem;
+        }
     }
 
 
@@ -19,11 +36,22 @@
         height: 315px;
         background: url(../../images/raspberry.png) no-repeat;
         position: absolute;
-        bottom: -50px;
+        bottom: -7rem;
         left:  0;
+        z-index: 4;
+
+        @include phones{
+            display: none;
+        }
+    }
+
+    @include phones{
+        padding: 3.3rem 0;
+        background: none;
     }
 }
 
 .features-container{
     text-align: center;
 }
+
