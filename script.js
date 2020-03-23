@@ -1,8 +1,8 @@
 //////////-Humburger menu-//////////
 
-var humburger = document.querySelector(".header__humburger-link");
-var menu = document.querySelector(".header__menu");
-var menuComputed = getComputedStyle(menu);
+const humburger = document.querySelector(".header__humburger-link");
+const menu = document.querySelector(".header__menu");
+const menuComputed = getComputedStyle(menu);
 
 humburger.addEventListener("click", function(e){
     e.preventDefault();
@@ -20,8 +20,8 @@ humburger.addEventListener("click", function(e){
 
 //////////-Bars consist-//////////
 
-var consistButton = document.querySelector(".slider__consist");
-var consistInfo = document.querySelector(".consist");
+const consistButton = document.querySelector(".slider__consist");
+const consistInfo = document.querySelector(".consist");
 
 consistButton.addEventListener("mouseover", function(){
     
@@ -36,3 +36,7 @@ consistButton.addEventListener("mouseout", function(){
         consistInfo.classList.add("hidden");
     }
 })
+
+
+//////////-Menu accordion-//////////
+
