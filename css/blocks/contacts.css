@@ -71,3 +71,11 @@
 .contacts__item:last-child {
   margin-right: 0;
 }
+
+.vk-icon, .facebook-icon, .insta-icon, .twitter-icon {
+  fill: #b2b2b2;
+}
+
+.vk-icon:hover, .facebook-icon:hover, .insta-icon:hover, .twitter-icon:hover {
+  fill: #000000;
+}
