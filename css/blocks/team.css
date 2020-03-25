@@ -61,7 +61,6 @@
 .team__text {
   font-size: 1.5rem;
   padding: 1rem 0;
-  display: none;
 }
 
 .team__item:after {

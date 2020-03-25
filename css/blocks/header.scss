@@ -1,4 +1,13 @@
 
+@mixin decor($width, $height) {
+    width: $width;
+    height: $height;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+
 @mixin tablets {
     @media screen and (max-width:768px){
         @content;
@@ -28,6 +37,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.6rem;
+    position: relative;
 
     .nav__item{
         margin-right: 2.5rem;
@@ -45,6 +55,7 @@
     @include tablets{
         flex-direction: column;
         text-align: center;
+        font-size: 3rem;
     }
    
 }
@@ -74,7 +85,7 @@
     }
 
     @include tablets{
-        margin-bottom: 2rem;
+        display: none;
     }
 }
 
@@ -88,21 +99,18 @@
     @include tablets{
         display: none;
         flex-direction: column-reverse;
-        justify-content: flex-end;
-        width: 50%;
+        justify-content: center;
+        width: 100%;
         height: 100vh;
-        background: #386d86;
+        background: #343739;
         position: absolute;
         top: 0;
         right: 0;
         z-index: 10;
-        opacity: 0.9;
-        border-radius: 3px;
-        padding-top: 3rem;
     }
 
     @include phones{
-        width: 100%;
+        width: 100%; 
     }
 
 }
@@ -113,10 +121,6 @@
     @include tablets{
         margin-right: 0;
     }
-}
-
-.header__humburger{
-    z-index: 20;
 }
 
 .header__humburger a{
@@ -136,4 +140,16 @@
         cursor: pointer;
     }
     
+}
+
+.menu-close{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 30;
+}
+
+.menu-close:hover{
+    cursor: pointer;
 }

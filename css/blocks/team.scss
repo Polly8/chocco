@@ -91,7 +91,7 @@
     &__text{
         font-size: 1.5rem;
         padding: 1rem 0;
-        display: none;
+        
     }
 }
 
@@ -122,6 +122,9 @@
 
 .team__text p{
     color: #666666;
+}
+
+.team__item .team__text{
 }
 
 .team__item--active .team__text{

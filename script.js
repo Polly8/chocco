@@ -3,18 +3,19 @@
 const humburger = document.querySelector(".header__humburger-link");
 const menu = document.querySelector(".header__menu");
 const menuComputed = getComputedStyle(menu);
+const closeMenu = document.querySelector(".menu-close");
 
-humburger.addEventListener("click", function(e){
-    e.preventDefault();
-    let menuDisplay = menuComputed.display;
+humburger.addEventListener("click", function(event){
+    event.preventDefault();
     
-    if (menuDisplay == "none"){        
-        menu.style.display = "flex";
+    menu.style.display = "flex";
+    closeMenu.style.display = "block";
+    
+});
 
-    }else{
-        menu.style.display = "none";
-    }
-    
+closeMenu.addEventListener("click", function(){
+    menu.style.display = "none";
+    closeMenu.style.display = "none";
 })
 
 
@@ -40,3 +41,33 @@ consistButton.addEventListener("mouseout", function(){
 
 //////////-Menu accordion-//////////
 
+const accoMenu = document.querySelector(".menu");
+const menuItem = document.querySelectorAll(".menu__item");
+const itemLength = menuItem.length;
+
+for (var i = 0; i < itemLength; i++){
+
+    menuItem[i].addEventListener("click", function(event){
+        event.stopPropagation();
+        event.preventDefault();
+
+        if (this.classList.contains("menu__item--opened")){
+
+            this.classList.remove("menu__item--opened");
+        }else{
+
+            for (var i = 0; i < itemLength; i++){
+                menuItem[i].classList.remove("menu__item--opened");
+            }
+
+            this.classList.add("menu__item--opened");                    
+        }
+    })
+};
+
+accoMenu.addEventListener("click", function(){
+
+    for (i = 0; i < itemLength; i++){
+        menuItem[i].classList.remove("menu__item--opened");
+    }
+})

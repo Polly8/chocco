@@ -25,7 +25,7 @@
 
     &::before{
         @include decor(196px, 453px);
-        background: url(../images/slider-bg.png) no-repeat;
+        background: url(../../images/slider-bg.png) no-repeat;
         right: 0;
         bottom: -23.5rem;
 
@@ -36,7 +36,7 @@
 
     &::after{
         @include decor(135px, 112px);
-        background: url(../images/blackberry-slider.png) no-repeat;
+        background: url(../../images/blackberry-slider.png) no-repeat;
         right: 1.2rem;
         bottom: -6rem;
 
@@ -232,14 +232,14 @@
 
     &::before{      
         @include decor(75px, 92px);
-        background: url(../images/slider-leaf2.png) no-repeat;
+        background: url(../../images/slider-leaf2.png) no-repeat;
         top: 1.7rem;
         left: -5.1rem;
     }
 
     &::after{      
         @include decor(99px, 73px);
-        background: url(../images/slider-leaf1.png) no-repeat;
+        background: url(../../images/slider-leaf1.png) no-repeat;
         bottom: -2.9rem;
         right: -0.5rem;     
     }

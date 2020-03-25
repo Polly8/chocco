@@ -8,7 +8,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: url(../images/slider-bg.png) no-repeat;
+  background: url(../../images/slider-bg.png) no-repeat;
   right: 0;
   bottom: -23.5rem;
 }
@@ -23,7 +23,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: url(../images/blackberry-slider.png) no-repeat;
+  background: url(../../images/blackberry-slider.png) no-repeat;
   right: 1.2rem;
   bottom: -6rem;
 }
@@ -231,7 +231,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: url(../images/slider-leaf2.png) no-repeat;
+  background: url(../../images/slider-leaf2.png) no-repeat;
   top: 1.7rem;
   left: -5.1rem;
 }
@@ -241,7 +241,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: url(../images/slider-leaf1.png) no-repeat;
+  background: url(../../images/slider-leaf1.png) no-repeat;
   bottom: -2.9rem;
   right: -0.5rem;
 }
