@@ -154,7 +154,7 @@
   margin-right: 0;
 }
 
-.reviews__switch-item-link, .reviews__switch-item--active {
+.reviews__switch-item-link, .reviews__switch-item:hover, .reviews__switch-item--active {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -171,4 +171,13 @@
   border-radius: 50%;
   background-color: #365a49;
   border: 6px solid #365a49;
+}
+
+.reviews__switch-item:hover {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #365a49;
+  border: 6px solid #365a49;
+  transform: scale(1.2);
 }

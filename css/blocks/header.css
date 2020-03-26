@@ -13,6 +13,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 1.6rem;
+  position: relative;
 }
 .nav__list .nav__item {
   margin-right: 2.5rem;
@@ -23,6 +24,10 @@
 
 .nav__item a {
   color: #fff;
+}
+
+.nav__item a:hover {
+  color: #2e4e3f;
 }
 
 .contacts-head {
@@ -56,14 +61,20 @@
   margin-right: 1.6rem;
 }
 
-.header__humburger {
+.header__humburger a {
   display: none;
   background: url(../../images/humburger.png) no-repeat;
   width: 24px;
   height: 22px;
 }
 @media screen and (max-width: 768px) {
-  .header__humburger {
+  .header__humburger a {
     display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__humburger a:hover {
+    cursor: pointer;
   }
 }

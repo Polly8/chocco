@@ -1,4 +1,13 @@
 
+@mixin decor($width, $height) {
+    width: $width;
+    height: $height;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+
 @mixin tablets {
     @media screen and (max-width:768px){
         @content;
@@ -28,6 +37,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.6rem;
+    position: relative;
 
     .nav__item{
         margin-right: 2.5rem;
@@ -35,12 +45,17 @@
         &:last-child{
             margin-right: 0;
         }
+
     }
    
 }
 
 .nav__item a{
     color: #fff;
+}
+
+.nav__item a:hover{
+    color: #2e4e3f;
 }
 
 .contacts-head{
@@ -56,6 +71,7 @@
             height: 11px;
             margin-right: 6px;
         }
+
     }
 }
 
@@ -69,19 +85,29 @@
     @include tablets{
         display: none;
     }
+
 }
 
 .nav{
     margin-right: 1.6rem;
+
 }
 
-.header__humburger{
+.header__humburger a{
     display: none;
     background: url(../../images/humburger.png) no-repeat;
     width: 24px;
     height: 22px;
 
     @include tablets{
-        display: block;
+        display: block;     
     }
+}
+
+.header__humburger a:hover{
+
+    @include tablets{
+        cursor: pointer;
+    }
+    
 }
