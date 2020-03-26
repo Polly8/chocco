@@ -24,8 +24,8 @@ closeMenu.addEventListener("click", function(event){
 
 //////////-Bars consist-//////////
 
-const consistButton = document.querySelector(".slider__consist");
-const consistInfo = document.querySelector(".consist");
+const consistButton = document.querySelector(".consist-wrapper");
+const consistInfo = document.querySelector(".consist-info-wrapper");
 
 consistButton.addEventListener("mouseover", function(){
     
