@@ -63,6 +63,8 @@
 
         @include tablets{
             display: none;
+            width: 224px;
+            height: 288px;
         }
     
         @include phones{
@@ -125,6 +127,7 @@
 }
 
 .team__item .team__text{
+    display: none;
 }
 
 .team__item--active .team__text{

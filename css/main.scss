@@ -16,6 +16,7 @@
 @import url('./blocks/menu-accord.css');
 @import url('./blocks/team.css');
 @import url('./blocks/bars.css');
+@import url('./blocks/mobile-menu.css');
 
 
 @mixin tablets {
@@ -37,7 +38,6 @@
     display: block;
     position: absolute;
 }
-
 
 
 

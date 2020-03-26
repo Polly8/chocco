@@ -46,16 +46,6 @@
             margin-right: 0;
         }
 
-        @include tablets{
-            margin-right: 0;
-            margin-bottom: 2rem;
-        }
-    }
-
-    @include tablets{
-        flex-direction: column;
-        text-align: center;
-        font-size: 3rem;
     }
    
 }
@@ -83,10 +73,6 @@
         }
 
     }
-
-    @include tablets{
-        display: none;
-    }
 }
 
 
@@ -98,19 +84,6 @@
 
     @include tablets{
         display: none;
-        flex-direction: column-reverse;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        background: #343739;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 10;
-    }
-
-    @include phones{
-        width: 100%; 
     }
 
 }
@@ -118,9 +91,6 @@
 .nav{
     margin-right: 1.6rem;
 
-    @include tablets{
-        margin-right: 0;
-    }
 }
 
 .header__humburger a{
@@ -140,16 +110,4 @@
         cursor: pointer;
     }
     
-}
-
-.menu-close{
-    display: none;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    z-index: 30;
-}
-
-.menu-close:hover{
-    cursor: pointer;
 }

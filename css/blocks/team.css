@@ -35,6 +35,8 @@
 @media screen and (max-width: 768px) {
   .team__photo {
     display: none;
+    width: 224px;
+    height: 288px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -93,6 +95,10 @@
 
 .team__text p {
   color: #666666;
+}
+
+.team__item .team__text {
+  display: none;
 }
 
 .team__item--active .team__text {

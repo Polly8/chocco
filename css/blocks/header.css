@@ -21,19 +21,6 @@
 .nav__list .nav__item:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 768px) {
-  .nav__list .nav__item {
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav__list {
-    flex-direction: column;
-    text-align: center;
-    font-size: 3rem;
-  }
-}
 
 .nav__item a {
   color: #fff;
@@ -57,11 +44,6 @@
   height: 11px;
   margin-right: 6px;
 }
-@media screen and (max-width: 768px) {
-  .contacts-head {
-    display: none;
-  }
-}
 
 .header__menu {
   display: flex;
@@ -72,30 +54,11 @@
 @media screen and (max-width: 768px) {
   .header__menu {
     display: none;
-    flex-direction: column-reverse;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background: #343739;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-  }
-}
-@media screen and (max-width: 480px) {
-  .header__menu {
-    width: 100%;
   }
 }
 
 .nav {
   margin-right: 1.6rem;
-}
-@media screen and (max-width: 768px) {
-  .nav {
-    margin-right: 0;
-  }
 }
 
 .header__humburger a {
@@ -114,16 +77,4 @@
   .header__humburger a:hover {
     cursor: pointer;
   }
-}
-
-.menu-close {
-  display: none;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  z-index: 30;
-}
-
-.menu-close:hover {
-  cursor: pointer;
 }
