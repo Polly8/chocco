@@ -103,3 +103,171 @@ for (i = 0; i < linkLength; i++){
         }        
     })
 }
+
+
+
+//////////-Slider bars-//////////
+
+const right = document.querySelector(".bars__arrow--next");
+const left = document.querySelector(".bars__arrow--prev");
+const sliders = document.querySelector(".bars-container");
+
+right.addEventListener("click", function(event){
+    event.preventDefault();
+
+    loop("right", event);
+});
+
+left.addEventListener("click", function(event){
+    event.preventDefault();
+
+    loop("left", event);
+});
+
+
+function loop(direction, event){
+    event.preventDefault();  
+
+    if(direction === "right"){
+        sliders.appendChild(sliders.firstElementChild);
+
+    }else{
+        sliders.insertBefore(sliders.lastElementChild, sliders.firstElementChild);
+    }
+}
+
+
+
+//////////-Reviews slider-//////////
+
+const authors = document.querySelectorAll(".reviews__switch-item");
+const reviews = document.querySelector(".reviews__list");
+
+const minRight = 0;
+const maxRight = 1880;
+const step = 940;
+let currentRight = 0;
+
+reviews.style.right = currentRight;
+
+for (i = 0; i < authors.length; i++){
+
+    authors[i].addEventListener("click", function(event){
+        event.stopPropagation();
+        event.preventDefault();
+            
+        for (i = 0; i < authors.length; i++){
+            authors[i].classList.remove("reviews__switch-item--active");
+        }
+
+        this.classList.add("reviews__switch-item--active");
+
+
+        if(this.classList.contains("second-review")){
+            
+            currentRight = step;
+            reviews.style.right = currentRight + "px";
+
+        }else if(this.classList.contains("third-review")){
+
+            currentRight = step*2;
+            reviews.style.right = currentRight + "px";
+
+        }else{
+
+            currentRight = 0;
+            reviews.style.right = currentRight + "px";
+        }     
+    });    
+}
+
+
+//////////-Form-//////////
+
+const myForm = document.querySelector(".order");
+const send = document.querySelector(".order__submit");
+const modal = document.querySelector(".modal-form");
+const modalText = document.querySelector(".modal-form__text");
+const modalClose = document.querySelector(".modal-form__btn");
+
+send.addEventListener("click", function(event){
+    event.preventDefault();
+
+    if(validateForm(myForm)){
+
+        modalText.textContent = "Сообщение отправлено";
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";  
+
+        modalClose.addEventListener("click", function(event){
+            event.stopPropagation();
+            event.preventDefault();
+
+            modal.style.display = "none";
+            document.body.style.overflow = "visible";         
+        });
+
+        modal.addEventListener("click", function(event){
+            event.stopPropagation();
+
+            modal.style.display = "none";
+            document.body.style.overflow = "visible";          
+        });
+
+        document.addEventListener("keyup", function(event){
+            let keyName = event.key;
+
+            if(keyName === "Escape"){
+                modal.style.display = "none";
+                document.body.style.overflow = "visible"; 
+            }
+        });
+
+        /*
+        const data = {
+            name: myForm.elements.name.value,
+            phone: myForm.elements.phone.value,
+            comment: myForm.elements.comment.value,
+            to: "some@mail.com"
+        }
+
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = "json";
+        xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+        xhr.send(JSON.stringify(data));
+
+        xhr.addEventListener("load", function(){
+            
+            if(xhr.resonse.status){
+                console.log("It's okay!");
+            }
+        })
+        */
+
+    }else{
+        console.log("What's wrong???");
+    }
+});
+
+
+function validateForm(form){
+    let valid = true;
+
+    if(!validateField(form.elements.name)){
+        valid = false;
+    };
+
+    if(!validateField(form.elements.phone)){
+        valid = false;
+    };
+
+    return valid;
+};
+
+
+function validateField(field){
+
+    field.nextElementSibling.textContent = field.validationMessage;
+
+    return field.checkValidity();
+};

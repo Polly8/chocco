@@ -2,6 +2,7 @@
   background-color: #d2ddd9;
   background: url(../../images/form-bg.png);
   color: #365a49;
+  position: relative;
 }
 
 .order {
