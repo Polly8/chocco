@@ -51,8 +51,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    min-width: 940px;
+
+    &::before{      
+        @include decor(75px, 92px);
+        background: url(../../images/slider-leaf2.png) no-repeat;
+        top: 270px;
+        left: 107px;
+    }
 
     @include tablets{
         align-items: start;
@@ -65,9 +70,10 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    min-width: 100%;
 
-    @include tablets{
-        flex-direction: column;
+    @include phones{
+        min-width: 66%;
     }
 }
 
@@ -232,13 +238,6 @@
     width: 50%;
     margin-right: 20px;
 
-    &::before{      
-        @include decor(75px, 92px);
-        background: url(../../images/slider-leaf2.png) no-repeat;
-        top: 1.7rem;
-        left: -5.1rem;
-    }
-
     &::after{      
         @include decor(99px, 73px);
         background: url(../../images/slider-leaf1.png) no-repeat;
@@ -312,8 +311,37 @@
 }
 
 
-.bars-container{
+.slider__list{
     display: flex;
     flex-direction: row;
+    position: relative;
+    left: 0;
+}
+
+.slider-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider__item-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    @include tablets{
+        flex-direction: column;
+        min-width: 85%;
+    }
+
+    @include phones{
+        min-width: 100%;
+    }
 }

@@ -110,7 +110,7 @@ for (i = 0; i < linkLength; i++){
 
 const right = document.querySelector(".bars__arrow--next");
 const left = document.querySelector(".bars__arrow--prev");
-const sliders = document.querySelector(".bars-container");
+const sliders = document.querySelector(".slider__list");
 
 right.addEventListener("click", function(event){
     event.preventDefault();
