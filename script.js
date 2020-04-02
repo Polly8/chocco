@@ -195,27 +195,33 @@ for (i=0; i < figuresInput.length; i++){
     figuresInput[i].addEventListener("keydown", function(event){
 
         let isFigure = false;
-        let isDash = false;
         let isControl = false;
 
         if (event.key >= 0 || event.key <= 9){
             isFigure = true;
         };
 
-        if (event.key == "-"){
-            isDash = true;
-        };
-
         if (event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace"){
             isControl = true;
         };
 
-        if (!isFigure && !isDash && !isControl){
+        if (!isFigure && !isControl){
             event.preventDefault();         
         };
     });
 };
 
+const noDash = document.querySelectorAll(".order-noDash");
+
+for (i=0; i < noDash.length; i++){
+
+    noDash[i].addEventListener("keydown", function(event){
+
+        if (event.key == "-"){
+            event.preventDefault();
+        }
+    })
+}
 
 
 
@@ -232,23 +238,20 @@ send.addEventListener("click", function(event){
 
     if(validateForm(myForm)){
 
-        const data = {
-            name: myForm.elements.name.value,
-            phone: myForm.elements.phone.value,
-            comment: myForm.elements.comment.value,
-            to: "some@mail.com"
-        }
+        const formData = new FormData();
+        formData.append('name',  myForm.elements.name.value);
+        formData.append('phone',  myForm.elements.phone.value);
+        formData.append('comment',  myForm.elements.comment.value);
+        formData.append('to',  'some@mail.com');
 
         const xhr = new XMLHttpRequest();
         xhr.responseType = "json";
         xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
-        xhr.send(data);
+        xhr.send(formData);
 
         xhr.addEventListener("load", function(){
 
-            console.log("ВОТ ЭТО НЕ ВЫПОЛНЯЕТСЯ");
-
-            if(xhr.resonse.status < 400){
+            if(xhr.response.status < 400){
                 
                 modalText.textContent = "Сообщение отправлено";
                 modal.style.display = "block";
