@@ -116,6 +116,8 @@
     border-bottom: none;
     border-color: #365a49 transparent transparent transparent;
     margin-bottom: 3px;
+    will-change: transform;
+    transition: 0.5s;
 }
 
 .team__name:hover{

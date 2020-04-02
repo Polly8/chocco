@@ -182,6 +182,25 @@ for (i = 0; i < authors.length; i++){
 }
 
 
+
+
+
+
+//////////-Form figures valid-//////////
+
+/*const figuresInput = document.querySelectorAll(".input-figures");
+
+for (i=0; i < figuresInput.length; i++){
+
+    figuresInput[i].addEventListener("keydown", function(event){
+
+        console.log(event.key);
+    });
+};
+
+*/
+
+
 //////////-Form-//////////
 
 const myForm = document.querySelector(".order");
@@ -195,35 +214,6 @@ send.addEventListener("click", function(event){
 
     if(validateForm(myForm)){
 
-        modalText.textContent = "Сообщение отправлено";
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";  
-
-        modalClose.addEventListener("click", function(event){
-            event.stopPropagation();
-            event.preventDefault();
-
-            modal.style.display = "none";
-            document.body.style.overflow = "visible";         
-        });
-
-        modal.addEventListener("click", function(event){
-            event.stopPropagation();
-
-            modal.style.display = "none";
-            document.body.style.overflow = "visible";          
-        });
-
-        document.addEventListener("keyup", function(event){
-            let keyName = event.key;
-
-            if(keyName === "Escape"){
-                modal.style.display = "none";
-                document.body.style.overflow = "visible"; 
-            }
-        });
-
-        /*
         const data = {
             name: myForm.elements.name.value,
             phone: myForm.elements.phone.value,
@@ -239,13 +229,41 @@ send.addEventListener("click", function(event){
         xhr.addEventListener("load", function(){
             
             if(xhr.resonse.status){
-                console.log("It's okay!");
-            }
-        })
-        */
 
+                modalText.textContent = "Сообщение отправлено";
+                modal.style.display = "block";
+                document.body.style.overflow = "hidden";
+                
+                console.log("It's okay!");
+
+                modalClose.addEventListener("click", function(event){
+                    event.stopPropagation();
+                    event.preventDefault();
+
+                    modal.style.display = "none";
+                    document.body.style.overflow = "visible";         
+                });
+
+                modal.addEventListener("click", function(event){
+                    event.stopPropagation();
+
+                    modal.style.display = "none";
+                    document.body.style.overflow = "visible";          
+                });
+
+                document.addEventListener("keyup", function(event){
+                    let keyName = event.key;
+
+                    if(keyName === "Escape"){
+                        modal.style.display = "none";
+                        document.body.style.overflow = "visible"; 
+                    }
+                });
+            }
+        }); 
+        
     }else{
-        console.log("What's wrong???");
+        console.log("No working validate form!");
     }
 });
 

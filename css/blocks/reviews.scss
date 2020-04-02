@@ -161,6 +161,7 @@
 
 .reviews__switch-item{
     margin-right: 1rem;
+    width: 76px;
 
     &:last-child{
         margin-right: 0;
@@ -178,19 +179,20 @@
     align-items: center;
 }
 
-.reviews__switch-item--active{
+.reviews__switch-item--active .reviews__switch-item-link{
     @extend .reviews__switch-item-link;
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     background-color: #365a49;
     border: 6px solid #365a49;
+    transform: scale(1.2);
 }
 
-.reviews__switch-item:hover{
+.reviews__switch-item .reviews__switch-item-link:hover{
     @extend .reviews__switch-item-link;
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     background-color: #365a49;
     border: 6px solid #365a49;
