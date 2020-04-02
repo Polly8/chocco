@@ -242,11 +242,13 @@ send.addEventListener("click", function(event){
         const xhr = new XMLHttpRequest();
         xhr.responseType = "json";
         xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
-        xhr.send(JSON.stringify(data));
+        xhr.send(data);
 
         xhr.addEventListener("load", function(){
-            
-            if(xhr.resonse.status){
+
+            console.log("ВОТ ЭТО НЕ ВЫПОЛНЯЕТСЯ");
+
+            if(xhr.resonse.status < 400){
                 
                 modalText.textContent = "Сообщение отправлено";
                 modal.style.display = "block";
@@ -278,8 +280,6 @@ send.addEventListener("click", function(event){
             }
         }); 
         
-    }else{
-        console.log("No working validate form!");
     }
 });
 
