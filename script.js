@@ -188,17 +188,35 @@ for (i = 0; i < authors.length; i++){
 
 //////////-Form figures valid-//////////
 
-/*const figuresInput = document.querySelectorAll(".input-figures");
+const figuresInput = document.querySelectorAll(".input-figures");
 
 for (i=0; i < figuresInput.length; i++){
 
     figuresInput[i].addEventListener("keydown", function(event){
 
-        console.log(event.key);
+        let isFigure = false;
+        let isDash = false;
+        let isControl = false;
+
+        if (event.key >= 0 || event.key <= 9){
+            isFigure = true;
+        };
+
+        if (event.key == "-"){
+            isDash = true;
+        };
+
+        if (event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace"){
+            isControl = true;
+        };
+
+        if (!isFigure && !isDash && !isControl){
+            event.preventDefault();         
+        };
     });
 };
 
-*/
+
 
 
 //////////-Form-//////////
@@ -229,12 +247,10 @@ send.addEventListener("click", function(event){
         xhr.addEventListener("load", function(){
             
             if(xhr.resonse.status){
-
+                
                 modalText.textContent = "Сообщение отправлено";
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden";
-                
-                console.log("It's okay!");
 
                 modalClose.addEventListener("click", function(event){
                     event.stopPropagation();
