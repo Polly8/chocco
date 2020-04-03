@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  min-width: 940px;
   padding: 4rem 3.6rem 2.7rem;
   background: url(../../images/reviews-main.png) no-repeat;
   position: relative;
@@ -149,12 +150,13 @@
 
 .reviews__switch-item {
   margin-right: 1rem;
+  width: 76px;
 }
 .reviews__switch-item:last-child {
   margin-right: 0;
 }
 
-.reviews__switch-item-link, .reviews__switch-item:hover, .reviews__switch-item--active {
+.reviews__switch-item-link, .reviews__switch-item .reviews__switch-item-link:hover, .reviews__switch-item--active .reviews__switch-item-link {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -165,19 +167,32 @@
   align-items: center;
 }
 
-.reviews__switch-item--active {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background-color: #365a49;
-  border: 6px solid #365a49;
-}
-
-.reviews__switch-item:hover {
-  width: 76px;
-  height: 76px;
+.reviews__switch-item--active .reviews__switch-item-link, .reviews__switch-item--active .reviews__switch-item .reviews__switch-item-link:hover, .reviews__switch-item .reviews__switch-item--active .reviews__switch-item-link:hover {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background-color: #365a49;
   border: 6px solid #365a49;
   transform: scale(1.2);
+}
+
+.reviews__switch-item .reviews__switch-item-link:hover {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #365a49;
+  border: 6px solid #365a49;
+  transform: scale(1.2);
+}
+
+.reviews__list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 0;
+}
+
+.list-wrapper {
+  width: 940px;
+  overflow: hidden;
 }
