@@ -308,3 +308,10 @@ function validateField(field){
 
     return field.checkValidity();
 };
+
+
+
+
+var $ = require('jquery');
+console.log($);
+
