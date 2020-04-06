@@ -1,22 +1,8 @@
 
-@import url('./layouts/fonts.css');
-@import url('./layouts/base.scss');
-@import url('./layouts/media.scss');
+@import './layouts/fonts.css';
+@import './layouts/*.scss';
 
-@import url('./blocks/hero.scss');
-@import url('./blocks/header.scss');
-@import url('./blocks/first-screen.scss');
-@import url('./blocks/features.scss');
-@import url('./blocks/description.scss');
-@import url('./blocks/reviews.scss');
-@import url('./blocks/circle-nav.scss');
-@import url('./blocks/contacts.scss');
-@import url('./blocks/deliver.scss');
-@import url('./blocks/menu-accord.scss');
-@import url('./blocks/team.scss');
-@import url('./blocks/bars.scss');
-@import url('./blocks/mobile-menu.scss');
-@import url('./blocks/modal.scss');
+@import './blocks/*.scss';
 
 
 
