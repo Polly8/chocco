@@ -29,7 +29,7 @@
   },
   "scripts": {
     "gulp": "cross-env NODE_ENV=dev gulp",
-    "build": "cross-env NODE_ENV=prod gulp"
+    "build": "cross-env NODE_ENV=prod gulp build"
   },
   "repository": {
     "type": "git",

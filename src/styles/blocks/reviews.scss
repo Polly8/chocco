@@ -79,9 +79,9 @@
     &:after{
         @include decor(95px, 286px);
         background: url(../../images/iconBgLeaf2.png) no-repeat;
-        bottom: -2.5rem;
+        bottom: -7.5rem;
         left: 0;
-        z-index: -8;
+        z-index: 1;
     }
 }
 
@@ -141,8 +141,9 @@
     &:before{
         @include decor(134px, 194px);
         background: url(../../images/berries4.png) no-repeat;
-        bottom: -8.8rem;
+        bottom: -12.8rem;
         left: -5.3rem;
+        z-index: 2;
 
         @include phones{
             bottom: -5.8rem;

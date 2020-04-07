@@ -901,6 +901,42 @@
             </section>
             <!--reviews_section-->
 
+            <section class="section video">
+                <div class="container video-container">
+
+                    <h2 class="section__title">Как мы работаем</h2>
+
+                    <div class="player">
+
+                        <div class="player__wrapper">
+
+                            <div id="yt-player" class="player__elem"></div>
+                            <div class="player__splash">
+                                <img src="./images/videocover.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="player__controls">
+                            <button class="player__start"></button>
+
+                            <div class="player__playback">
+                                <button class="player__playback-button"></button>
+                            </div>
+
+                            <div class="player__volume">
+                                <button class="volume__pic"></button>
+
+                                <div class="volume__playback">
+                                    <button class="volume__playback-button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!--video_section-->
+
             <section class="section deliver">
                 <div class="container deliver-container">
 
@@ -1017,7 +1053,7 @@
             <section class="contacts">
                 
                 <div class="contacts__map">
-                    <img src="./images/map.png" alt="" class="map">
+                    <div id="map"></div> 
 
                     <div class="contacts__footer">
                         <div class="container footer-container">
@@ -1136,7 +1172,10 @@
         </div>
     </div>
 
-</body>
+</body> 
 
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 <script src="main.min.js"></script>
 </html>
