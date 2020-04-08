@@ -36,7 +36,7 @@
     height: 6px;
     border-radius: 50%;
     background-color: teal;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     position: relative;
 
     &:last-child{
@@ -57,15 +57,32 @@
     }
 }
 
-/*
-.circle-nav__item--active:before{
+
+.circle--active:before{
     display: block;
-    @extend .circle-nav__item:before
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid teal;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
 
 }
 
 
 .circle-nav__item:hover:before{
-    @extend .circle-nav__item--active:before
+    cursor: pointer;
+    display: block;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid teal;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
 }
-*/

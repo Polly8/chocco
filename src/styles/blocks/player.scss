@@ -120,7 +120,8 @@
 }
 
 .player--paused{
-    background: red;
+    background: url(../../images/pause.png) no-repeat;
+    background-position: center;
 }
 
 .player__start:hover{
@@ -171,6 +172,11 @@
     margin-right: 10px;
 }
 
+.volume__pic--nosound{
+    background: url(../../images/nosoud.png) no-repeat;
+    background-position: center;
+}
+
 .volume__playback{
     width: 50%;
     position: relative;
@@ -179,7 +185,7 @@
 
     &::before{
         content: "";
-        width: 100%;
+        width: 90%;
         height: 4px;
         position: absolute;
         display: block;
@@ -197,6 +203,6 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    left: 0;
+    right: 0;
 
 }

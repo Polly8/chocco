@@ -13,7 +13,7 @@
 
         <div class="wrapper__content">
 
-            <section class="section hero">
+            <section class="section hero section--active">
         
                 <header class="header">
                     <div class="container header__container">
@@ -28,25 +28,25 @@
                             <nav class="nav">
                                 <ul class="nav__list">
                                     <li class="nav__item">
-                                        <a href="#">О нас</a>
+                                        <a href="#" data-scroll-to="1">О нас</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Батончики</a>
+                                        <a href="#" data-scroll-to="2">Батончики</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Команда</a>
+                                        <a href="#" data-scroll-to="3">Команда</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Меню</a>
+                                        <a href="#" data-scroll-to="4">Меню</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Отзывы</a>
+                                        <a href="#" data-scroll-to="5">Отзывы</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Как мы работаем</a>
+                                        <a href="#" data-scroll-to="6">Как мы работаем</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Контакты</a>
+                                        <a href="#" data-scroll-to="7">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -1123,15 +1123,15 @@
 
         <div class="circle-nav">
             <ul class="circle-nav__list">
-                <li class="circle-nav__item circle-nav__item--active"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
-                <li class="circle-nav__item"><a href="#"></a></li>
+                <li class="circle-nav__item circle--active" data-scroll-to="0"></li><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="1"><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="2"><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="3"><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="4"><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="5"><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="6"><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="7"><a href="#"></a></li>
+                <li class="circle-nav__item" data-scroll-to="8"><a href="#"></a></li>
             </ul>
         </div>
         
@@ -1177,5 +1177,6 @@
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
+<script src="node_modules/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
 <script src="main.min.js"></script>
 </html>

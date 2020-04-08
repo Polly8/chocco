@@ -20,11 +20,10 @@ const init = () => {
     const myCollection = new ymaps.GeoObjectCollection({}, {
         draggable: false,
         iconLayout: 'default#image',
-        iconImageHref: "./images/icons/marker.svg",
+        iconImageHref: "./images/marker.png",
         iconImageSize: [30, 42],
         iconImageOffset: [-35, -42]
     });
-    
 
     for (var i = 0; i < coords.length; i++) {
         myCollection.add(new ymaps.Placemark(coords[i]));

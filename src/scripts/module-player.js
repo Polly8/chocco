@@ -2,7 +2,7 @@
 let player;
 const playerContainer = $('.player');
 const playerStart = $('.player__start');
-
+const volumeBtn = $(".volume__pic");
 
 
 let eventsInit = () => {
@@ -41,7 +41,40 @@ let eventsInit = () => {
 
     $(".player__splash").click(e => {
         player.playVideo();
-    })
+    });
+
+
+    $(".volume__pic").click(e => {
+        e.preventDefault();
+
+        if (volumeBtn.hasClass("volume__pic--nosound")){
+
+            player.unMute();
+            volumeBtn.removeClass("volume__pic--nosound");
+
+        }else{
+            
+            player.mute();
+            volumeBtn.addClass("volume__pic--nosound");
+        }
+    });
+
+    $(".volume__playback").click(e => {
+
+        const barVolume = $(e.currentTarget);
+        const clickedPositionVolume = e.originalEvent.layerX;
+        const newVolumeButtonPositionPercent = (clickedPositionVolume / barVolume.width()) * 100;
+        let volumePoint = player.getVolume();
+    
+    
+        $(".volume__playback-button").css({
+            left: `${newVolumeButtonPositionPercent}%`
+        });
+
+        player.setVolume(newVolumeButtonPositionPercent);
+        
+    });
+
     
 };
 
