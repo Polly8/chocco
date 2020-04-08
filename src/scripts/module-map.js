@@ -31,7 +31,7 @@ const init = () => {
     
     myMap.geoObjects.add(myCollection);
 
-};
+}; 
 
 
 ymaps.ready(init);
