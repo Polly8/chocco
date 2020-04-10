@@ -24,7 +24,7 @@
 
     &::after{
         @include decor(196px, 264px);
-        background: url(../../images/video-leaf3.png) no-repeat;
+        background: url(../images/video-leaf3.png) no-repeat;
         right: 0px;
         top: 676px;
         z-index: 7;
@@ -53,14 +53,14 @@
 
     &::before{
         @include decor(100px, 75px);
-        background: url(../../images/video-leaf1.png) no-repeat;
+        background: url(../images/video-leaf1.png) no-repeat;
         right: -105px;
         top: -70px;
     }
 
     &::after{
         @include decor(75px, 135px);
-        background: url(../../images/video-leaf2.png) no-repeat;
+        background: url(../images/video-leaf2.png) no-repeat;
         left: -125px;
         top: 310px;
     }
@@ -114,13 +114,13 @@
     width: 55px;
     height: 100%;
     border: none;
-    background: url(../../images/playstart.png) no-repeat;
+    background: url(../images/playstart.png) no-repeat;
     background-position: center;
     margin-right: 10px;
 }
 
 .player--paused{
-    background: url(../../images/pause.png) no-repeat;
+    background: url(../images/pause.png) no-repeat;
     background-position: center;
 }
 
@@ -139,7 +139,7 @@
         height: 4px;
         position: absolute;
         display: block;
-        background: url(../../images/video-stick.png) no-repeat;
+        background: url(../images/video-stick.png) no-repeat;
     }
 }
 
@@ -167,13 +167,13 @@
     width: 40px;
     height: 20px;
     border: none;
-    background: url(../../images/volume.png) no-repeat;
+    background: url(../images/volume.png) no-repeat;
     background-position: center;
     margin-right: 10px;
 }
 
 .volume__pic--nosound{
-    background: url(../../images/nosoud.png) no-repeat;
+    background: url(../images/nosoud.png) no-repeat;
     background-position: center;
 }
 
@@ -189,7 +189,7 @@
         height: 4px;
         position: absolute;
         display: block;
-        background: url(../../images/volume-stick.png) no-repeat;
+        background: url(../images/volume-stick.png) no-repeat;
     }
 }
 

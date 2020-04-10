@@ -21,7 +21,7 @@
 
 .deliver{
     background-color: #d2ddd9;
-    background: url(../../images/form-bg.png);
+    background: url(../images/form-bg.png);
     color: #365a49;
     position: relative;
 }
@@ -34,7 +34,7 @@
 
     &::before{
         @include decor(48px, 48px);
-        background: url(../../images/blackberry.png)no-repeat;
+        background: url(../images/blackberry.png)no-repeat;
         bottom: 0;
         left: -5rem;
 
@@ -45,7 +45,7 @@
 
     &::after{
         @include decor(135px, 188px);
-        background: url(../../images/form-leaf.png)no-repeat;
+        background: url(../images/form-leaf.png)no-repeat;
         bottom: 0;
         right: -6.1rem;
 
@@ -205,7 +205,7 @@
 .order__checkbox--visible-fill{
     width: 20px;
     height: 20px;
-    background: url(../../images/tick.png) no-repeat;
+    background: url(../images/tick.png) no-repeat;
     background-position: center;
     display: none;
 }

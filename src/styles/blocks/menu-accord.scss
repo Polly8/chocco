@@ -20,7 +20,7 @@
         display: flex;
         justify-content: flex-end;
         height: 100%;
-        background: url(../../images/menu-bg.png) no-repeat;
+        background: url(../images/menu-bg.png) no-repeat;
         background-size: cover;
     }
 
@@ -47,19 +47,19 @@
 
 
 .menu__trigger--milky{
-    background: url(../../images/with-milk2.png) no-repeat;
+    background: url(../images/with-milk2.png) no-repeat;
     background-size: cover;
     
 }
 
 .menu__trigger--honey{
-    background: url(../../images/with-honey2.png) no-repeat;
+    background: url(../images/with-honey2.png) no-repeat;
     background-position: right;
     background-size: cover;
 }
 
 .menu__trigger--berry{ 
-    background: url(../../images/with-berries2.png) no-repeat;
+    background: url(../images/with-berries2.png) no-repeat;
     background-position: right;
     background-size: cover;
 }
@@ -91,7 +91,7 @@
         position: absolute;
         width: 18px;
         height: 18px;
-        background: url(../../images/menu-close.png) no-repeat;
+        background: url(../images/menu-close.png) no-repeat;
         top: 2rem;
         right: 2rem;
     }

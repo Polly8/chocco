@@ -41,7 +41,7 @@
         align-items: center;
         min-width: 940px;
         padding: 4rem 3.6rem 2.7rem;
-        background: url(../../images/reviews-main.png) no-repeat;
+        background: url(../images/reviews-main.png) no-repeat;
         position: relative;
         margin-bottom: 2.2rem;
         background-position: center;
@@ -59,7 +59,7 @@
 
         &:after{
             @include decor(146px, 86px);
-            background: url(../../images/berries3.png) no-repeat;
+            background: url(../images/berries3.png) no-repeat;
             top: 0;
             right: -5rem;
         }
@@ -78,7 +78,7 @@
 
     &:after{
         @include decor(95px, 286px);
-        background: url(../../images/iconBgLeaf2.png) no-repeat;
+        background: url(../images/iconBgLeaf2.png) no-repeat;
         bottom: -7.5rem;
         left: 0;
         z-index: 1;

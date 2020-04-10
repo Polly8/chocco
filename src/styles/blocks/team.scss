@@ -100,7 +100,7 @@
 
 .team__item:after{
     @include decor(120px, 120px);
-    background: url(../../images/team-berry.png)no-repeat;
+    background: url(../images/team-berry.png)no-repeat;
     bottom: -14.1rem;
     left: -6.6rem;
     z-index: 5;
