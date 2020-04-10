@@ -36,7 +36,7 @@ task( 'copy:html', () => {
 task( 'styles', () => {
     return src([...STYLE_LIBS, "src/styles/main.scss"])
     .pipe(gulpif(env === "dev", sourcemaps.init()))
-    .pipe(concat('main.min.scss'))
+    .pipe(concat('styles/main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(env === "dev", autoprefixer({
@@ -53,7 +53,7 @@ task( 'styles', () => {
 task("scripts", () => {
     return src([...JS_LIBS, "src/scripts/*.js"])
     .pipe(sourcemaps.init())
-    .pipe(concat('main.min.js'))
+    .pipe(concat('scripts/main.min.js'))
     .pipe(babel({
         presets: ['@babel/env']
     }))
@@ -90,6 +90,11 @@ task( 'images', () => {
     .pipe(dest("dist/images"));
 });
 
+task( 'fonts', () => {
+    return src("src/fonts/*")
+    .pipe(dest("dist/fonts"));
+});
+
 
 task('server', () => {
     browserSync.init({
@@ -110,11 +115,11 @@ task("watch", () => {
 
 
 task("default", series("clean", 
-    parallel("copy:html", "styles", "scripts", "icons", "images"), 
+    parallel("copy:html", "styles", "scripts", "icons", "images", "fonts"), 
     parallel("watch", "server") )
 );
 
 
 task("build", 
-    series("clean", parallel("copy:html", "styles", "scripts", "icons", "images"))
+    series("clean", parallel("copy:html", "styles", "scripts", "icons", "images", "fonts"))
 );
