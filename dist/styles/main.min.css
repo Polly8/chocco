@@ -415,7 +415,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/slider-bg.png) no-repeat;
+    background: url(../images/slider-bg.png) no-repeat;
     right: 0;
     bottom: -23.5rem; }
     @media screen and (max-width: 768px) {
@@ -427,7 +427,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/blackberry-slider.png) no-repeat;
+    background: url(../images/blackberry-slider.png) no-repeat;
     right: 1.2rem;
     bottom: -6rem; }
     @media screen and (max-width: 768px) {
@@ -445,7 +445,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/slider-leaf2.png) no-repeat;
+    background: url(../images/slider-leaf2.png) no-repeat;
     top: 270px;
     left: 107px; }
   @media screen and (max-width: 768px) {
@@ -593,7 +593,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/slider-leaf1.png) no-repeat;
+    background: url(../images/slider-leaf1.png) no-repeat;
     bottom: -2.9rem;
     right: -0.5rem; }
   .slider__img img {
@@ -764,7 +764,7 @@ ul li {
   display: inline-block;
   width: 12px;
   height: 11px;
-  background: url(../../images/phone2.png) no-repeat; }
+  background: url(../images/phone2.png) no-repeat; }
 
 .contacts__footer {
   background-color: #fff;
@@ -804,7 +804,7 @@ ul li {
 
 .deliver {
   background-color: #d2ddd9;
-  background: url(../../images/form-bg.png);
+  background: url(../images/form-bg.png);
   color: #365a49;
   position: relative; }
 
@@ -819,7 +819,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/blackberry.png) no-repeat;
+    background: url(../images/blackberry.png) no-repeat;
     bottom: 0;
     left: -5rem; }
     @media screen and (max-width: 768px) {
@@ -831,7 +831,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/form-leaf.png) no-repeat;
+    background: url(../images/form-leaf.png) no-repeat;
     bottom: 0;
     right: -6.1rem; }
     @media screen and (max-width: 768px) {
@@ -956,7 +956,7 @@ ul li {
 .order__checkbox--visible-fill {
   width: 20px;
   height: 20px;
-  background: url(../../images/tick.png) no-repeat;
+  background: url(../images/tick.png) no-repeat;
   background-position: center;
   display: none; }
 
@@ -1022,7 +1022,7 @@ ul li {
     position: absolute;
     width: 67px;
     height: 21px;
-    background: url(../../images/circles1.png) no-repeat;
+    background: url(../images/circles1.png) no-repeat;
     top: 50%;
     left: -100%;
     transform: translateY(-50%); }
@@ -1035,7 +1035,7 @@ ul li {
     position: absolute;
     width: 67px;
     height: 21px;
-    background: url(../../images/circles1.png) no-repeat;
+    background: url(../images/circles1.png) no-repeat;
     top: 50%;
     right: -100%;
     transform: translateY(-50%); }
@@ -1044,7 +1044,7 @@ ul li {
         display: none; } }
 
 .features {
-  background: url(../../images/iconBgLeaf.png) no-repeat;
+  background: url(../images/iconBgLeaf.png) no-repeat;
   background-position: center left;
   position: relative; }
   .features__text {
@@ -1061,7 +1061,7 @@ ul li {
     display: block;
     width: 160px;
     height: 315px;
-    background: url(../../images/raspberry.png) no-repeat;
+    background: url(../images/raspberry.png) no-repeat;
     position: absolute;
     bottom: -7rem;
     left: 0;
@@ -1154,7 +1154,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/leaf1.png) no-repeat;
+    background: url(../images/leaf1.png) no-repeat;
     background-size: contain;
     bottom: 3.6rem;
     right: -1rem; }
@@ -1175,7 +1175,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/leaf2.png) no-repeat;
+    background: url(../images/leaf2.png) no-repeat;
     bottom: -12.5rem;
     right: 18.6rem;
     background-size: contain; }
@@ -1201,7 +1201,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/leaf3.png) no-repeat;
+    background: url(../images/leaf3.png) no-repeat;
     bottom: -14.1rem;
     left: -2.5rem;
     background-size: contain; }
@@ -1223,7 +1223,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/berries1.png) no-repeat;
+    background: url(../images/berries1.png) no-repeat;
     bottom: 0;
     right: -27.5rem;
     background-size: contain; }
@@ -1246,7 +1246,7 @@ ul li {
   content: "";
   display: block;
   position: absolute;
-  background: url(../../images/berries2.png) no-repeat;
+  background: url(../images/berries2.png) no-repeat;
   bottom: -4.3rem;
   right: 0.4rem;
   background-size: contain; }
@@ -1319,7 +1319,7 @@ ul li {
     .contacts-head a::before {
       content: "";
       display: inline-block;
-      background: url(../../images/phone.png);
+      background: url(../images/phone.png);
       width: 12px;
       height: 11px;
       margin-right: 6px; }
@@ -1338,7 +1338,7 @@ ul li {
 
 .header__humburger a {
   display: none;
-  background: url(../../images/humburger.png) no-repeat;
+  background: url(../images/humburger.png) no-repeat;
   width: 24px;
   height: 22px; }
   @media screen and (max-width: 768px) {
@@ -1351,7 +1351,7 @@ ul li {
 
 .hero {
   background-color: #86c3d7;
-  background-image: url(../../images/hero-leaf.png);
+  background-image: url(../images/hero-leaf.png);
   background-repeat: no-repeat;
   color: #fff;
   background-position: right; }
@@ -1364,7 +1364,7 @@ ul li {
     display: flex;
     justify-content: flex-end;
     height: 100%;
-    background: url(../../images/menu-bg.png) no-repeat;
+    background: url(../images/menu-bg.png) no-repeat;
     background-size: cover; }
   .menu__item {
     display: flex;
@@ -1382,16 +1382,16 @@ ul li {
   color: #fff; }
 
 .menu__trigger--milky {
-  background: url(../../images/with-milk2.png) no-repeat;
+  background: url(../images/with-milk2.png) no-repeat;
   background-size: cover; }
 
 .menu__trigger--honey {
-  background: url(../../images/with-honey2.png) no-repeat;
+  background: url(../images/with-honey2.png) no-repeat;
   background-position: right;
   background-size: cover; }
 
 .menu__trigger--berry {
-  background: url(../../images/with-berries2.png) no-repeat;
+  background: url(../images/with-berries2.png) no-repeat;
   background-position: right;
   background-size: cover; }
 
@@ -1420,7 +1420,7 @@ ul li {
     position: absolute;
     width: 18px;
     height: 18px;
-    background: url(../../images/menu-close.png) no-repeat;
+    background: url(../images/menu-close.png) no-repeat;
     top: 2rem;
     right: 2rem; }
 
@@ -1530,7 +1530,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/video-leaf3.png) no-repeat;
+    background: url(../images/video-leaf3.png) no-repeat;
     right: 0px;
     top: 676px;
     z-index: 7; }
@@ -1556,7 +1556,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/video-leaf1.png) no-repeat;
+    background: url(../images/video-leaf1.png) no-repeat;
     right: -105px;
     top: -70px; }
   .player::after {
@@ -1565,7 +1565,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/video-leaf2.png) no-repeat;
+    background: url(../images/video-leaf2.png) no-repeat;
     left: -125px;
     top: 310px; }
 
@@ -1609,12 +1609,12 @@ ul li {
   width: 55px;
   height: 100%;
   border: none;
-  background: url(../../images/playstart.png) no-repeat;
+  background: url(../images/playstart.png) no-repeat;
   background-position: center;
   margin-right: 10px; }
 
 .player--paused {
-  background: url(../../images/pause.png) no-repeat;
+  background: url(../images/pause.png) no-repeat;
   background-position: center; }
 
 .player__start:hover {
@@ -1630,7 +1630,7 @@ ul li {
     height: 4px;
     position: absolute;
     display: block;
-    background: url(../../images/video-stick.png) no-repeat; }
+    background: url(../images/video-stick.png) no-repeat; }
 
 .player__playback-button {
   background: #626262;
@@ -1654,12 +1654,12 @@ ul li {
   width: 40px;
   height: 20px;
   border: none;
-  background: url(../../images/volume.png) no-repeat;
+  background: url(../images/volume.png) no-repeat;
   background-position: center;
   margin-right: 10px; }
 
 .volume__pic--nosound {
-  background: url(../../images/nosoud.png) no-repeat;
+  background: url(../images/nosoud.png) no-repeat;
   background-position: center; }
 
 .volume__playback {
@@ -1673,7 +1673,7 @@ ul li {
     height: 4px;
     position: absolute;
     display: block;
-    background: url(../../images/volume-stick.png) no-repeat; }
+    background: url(../images/volume-stick.png) no-repeat; }
 
 .volume__playback-button {
   background: #626262;
@@ -1702,7 +1702,7 @@ ul li {
     align-items: center;
     min-width: 940px;
     padding: 4rem 3.6rem 2.7rem;
-    background: url(../../images/reviews-main.png) no-repeat;
+    background: url(../images/reviews-main.png) no-repeat;
     position: relative;
     margin-bottom: 2.2rem;
     background-position: center;
@@ -1725,7 +1725,7 @@ ul li {
       content: "";
       display: block;
       position: absolute;
-      background: url(../../images/berries3.png) no-repeat;
+      background: url(../images/berries3.png) no-repeat;
       top: 0;
       right: -5rem; }
     @media screen and (max-width: 768px) {
@@ -1743,7 +1743,7 @@ ul li {
     content: "";
     display: block;
     position: absolute;
-    background: url(../../images/iconBgLeaf2.png) no-repeat;
+    background: url(../images/iconBgLeaf2.png) no-repeat;
     bottom: -7.5rem;
     left: 0;
     z-index: 1; }
@@ -1913,7 +1913,7 @@ ul li {
   content: "";
   display: block;
   position: absolute;
-  background: url(../../images/team-berry.png) no-repeat;
+  background: url(../images/team-berry.png) no-repeat;
   bottom: -14.1rem;
   left: -6.6rem;
   z-index: 5; }
