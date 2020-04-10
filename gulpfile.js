@@ -36,7 +36,7 @@ task( 'copy:html', () => {
 task( 'styles', () => {
     return src([...STYLE_LIBS, "src/styles/main.scss"])
     .pipe(gulpif(env === "dev", sourcemaps.init()))
-    .pipe(concat('styles/main.min.scss'))
+    .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(env === "dev", autoprefixer({
@@ -44,7 +44,7 @@ task( 'styles', () => {
     })))
     .pipe(gulpif(env === "prod", cleanCSS()))
     .pipe(gulpif(env === "prod", sourcemaps.write()))
-    .pipe(dest(DIST_PATH))
+    .pipe(dest(`${DIST_PATH}/styles`))
     .pipe(reload({stream:true}));
 });
 
@@ -53,13 +53,13 @@ task( 'styles', () => {
 task("scripts", () => {
     return src([...JS_LIBS, "src/scripts/*.js"])
     .pipe(sourcemaps.init())
-    .pipe(concat('scripts/main.min.js'))
+    .pipe(concat('main.min.js'))
     .pipe(babel({
         presets: ['@babel/env']
     }))
     .pipe(uglify())
     .pipe(sourcemaps.write())
-    .pipe(dest(DIST_PATH))
+    .pipe(dest(`${DIST_PATH}/scripts`))
     .pipe(reload({stream:true}));
 })
 
