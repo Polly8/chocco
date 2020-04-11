@@ -73,7 +73,7 @@
     min-width: 100%;
 
     @include phones{
-        min-width: 66%;
+        min-width: 100vw;
     }
 }
 
@@ -179,6 +179,10 @@
     margin-right: 4.5rem;
     font-size: 5rem;
     font-weight: lighter;
+
+    @include phones{
+        margin-right: 2.5rem;
+    }
 }
  
 .slider__button{
