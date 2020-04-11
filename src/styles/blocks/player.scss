@@ -28,6 +28,11 @@
         right: 0px;
         top: 676px;
         z-index: 7;
+
+        @include phones{
+            right: -110px;
+            top: 447px;
+        }
     }
 }
 

@@ -104,6 +104,10 @@
     bottom: -14.1rem;
     left: -6.6rem;
     z-index: 5;
+
+    @include phones{
+        z-index: 2;
+    }
 }
 
 .team__name::after{

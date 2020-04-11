@@ -3,11 +3,18 @@
 
 const authors = document.querySelectorAll(".reviews__switch-item");
 const reviews = document.querySelector(".reviews__list");
+const item = document.querySelector(".reviews__main");
 
+const itemStyles = getComputedStyle(item);
+let itemWidth = itemStyles.width;
+
+
+let step = parseInt(itemWidth);
 const minRight = 0;
-const maxRight = 1880;
-const step = 940;
+const maxRight = step * 2;
 let currentRight = 0;
+
+
 
 reviews.style.right = currentRight;
 

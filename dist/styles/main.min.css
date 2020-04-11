@@ -1567,6 +1567,10 @@ ul li {
     right: 0px;
     top: 676px;
     z-index: 7; }
+    @media screen and (max-width: 480px) {
+      .video::after {
+        right: -110px;
+        top: 447px; } }
 
 .video-container {
   display: flex;
@@ -1978,6 +1982,9 @@ ul li {
   bottom: -14.1rem;
   left: -6.6rem;
   z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .team__item:after {
+      z-index: 2; } }
 
 .team__name::after {
   content: "";
