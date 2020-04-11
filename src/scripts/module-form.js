@@ -70,6 +70,8 @@ send.addEventListener("click", function(event){
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden";
 
+                myForm.reset();
+
                 modalClose.addEventListener("click", function(event){
                     event.stopPropagation();
                     event.preventDefault();
