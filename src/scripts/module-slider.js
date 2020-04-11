@@ -27,4 +27,4 @@ function loop(direction, event){
     }else{
         sliders.insertBefore(sliders.lastElementChild, sliders.firstElementChild);
     }
-}
+};

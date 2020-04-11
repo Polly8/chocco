@@ -19,4 +19,4 @@ closeMenu.addEventListener("click", function(event){
     
     mobileMenu.classList.add("mobile-menu--closed");
     document.body.style.overflow = "visible";
-})
+});

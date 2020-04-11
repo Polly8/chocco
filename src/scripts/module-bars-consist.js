@@ -16,4 +16,4 @@ consistButton.addEventListener("mouseout", function(){
     if (!(consistInfo.classList.contains("hidden"))){       
         consistInfo.classList.add("hidden");
     }
-})
+});

@@ -40,4 +40,4 @@ for (i = 0; i < authors.length; i++){
             reviews.style.right = currentRight + "px";
         }     
     });    
-}
+};

@@ -30,4 +30,4 @@ accoMenu.addEventListener("click", function(){
     for (i = 0; i < itemLength; i++){
         menuItem[i].classList.remove("menu__item--opened");
     }
-})
+});

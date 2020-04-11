@@ -25,5 +25,5 @@ for (i = 0; i < linkLength; i++){
             this.parentNode.classList.add("team__item--active");
         }        
     })
-}
+};
 
